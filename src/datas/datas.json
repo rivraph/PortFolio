@@ -1,0 +1,59 @@
+{
+"personality": {
+"title" : "Developpeur Web Full Stack", 
+"firstName": "Raphaël", 
+"lastName": "Rivière", 
+"age": "37", 
+"adresse": "13 rue des estivenques", 
+"permis": "B et A", 
+"city": "Gallargues le Montueux, France", 
+"telephone": "06 63 77 86 77", 
+"email": "raphael.riviere@gmail.com",
+"github":"https://github.com/rrczt974",
+"linkedin":"https://www.linkedin.com/in/rivière-raphaël-130b78151/",
+"facebook" : "https://www.facebook.com/raphael.riviere.58",
+"hobbies": "photographie, sports, simracing, moto, informatique ...",
+"instagram" : "https://www.instagram.com/therrelylifephotography/",
+"personality" : "Sérieux, sociable, travailleur, patient, pragmatique, autodidacte,résolveur de problèmes, j'adore résoudre des problèmes, casses têtes... Ma carrière dans l'automobile m'a poussé à rechercher une solution à tous les problèmes. Aujourd'hui je tourne la page pour un nouveau métier, une passion d'adolescents, et une de mes passions.",
+"img" : "../src/assets/IMG_3880.PNG"},
+
+"education": {
+"wild": "09/2024 - 02/2025 => formation à la wild Code School de développeur Web et Web Application Bac +2 RNCP n° 37674 (HTML, CSS, JS, REACT,API web, Express.JS, SQL, méthodes Agile, déploiement continu CI/CD Github et docker (en cours)",
+"remap": "2015 => reprogrammation avancée moteur essence et diesel à Alientech France à Montans",
+"tdra" : "2010 => technicien de diagnostic et réparateur automobile à l'AFPA de Chartres",
+"bacc": "2005 => baccalauréat scientifique option sciences de l'ingénieur au lycée de la Rivière (île de Réunion)"},
+
+
+
+"experience":{
+"bleulib": "Août 2024 => stage observation chez Bleu Libellule. Découverte du métier de webmaster et de développeur web",
+
+"biomotors": "07/2021 - 05/2024 => technicien conseil et gestionnaire d'expertises",
+
+"kia1": "01/2018 - 06/2021 => Chef d'atelier, responsable magasin et pièces détachées, réception clientèle et entretien et réparations véhicules Kia",
+
+"kia2": "10/2012 - 05/2016 => Technicien avancé et en charge de l'entretien et la réparation des véhicules Kia",
+
+"mecaperfs" : "07/2016 - 12/2017 => Gérant entreprise individuelle en mécanique automobile, reprogrammation et solutions electroniques, pose d'accessoires et reventre de voitures d'occasion.",
+
+"delko" : "03/2012 - 09/2012 => Mécanicien multimarque",
+
+"kia" : "07/2010 - 01/2012 => Mécanicien multimarque chez un concessionnaire spécialisé KIA, Mitsubishi et Subaru"
+
+},
+
+"others":
+{"francais" : "Francais => lu, écrit er parlé couramment",
+"anglais": "Anglais => lu, écrit et parlé niveau scolaire",
+"espagnol": "Espagnol => notion",
+"logiciels": "logiciels divers du milieu informatique => Suite Office, Adobe Photoshop, Visual Studio Code, Git, Trello, Slack, github"},
+
+"projets" : {
+"projet1" : "solo Rush",
+"img1": "../assets/solo rush preview.png",
+"projet2" : "html & CSS",
+"img2": "",
+"projet3" : "Le P1",
+"img3": ""}
+
+}
