@@ -3,6 +3,11 @@ import "../styles/Home.css";
 import { useState } from "react";
 
 function Footer() {
+	const handleClick = (url: string) => {
+		window.open(url);
+	};
+	const url = "https://www.instagram.com/therrelylifephotography/";
+
 	return (
 		<>
 			<div className="footer">
@@ -16,11 +21,12 @@ function Footer() {
 					<b> © RR development </b>
 				</p>
 				<p>
-					<b>Merci à la WCS</b>
+					<b id="therrelylife" onClick={() => handleClick(url)}>
+						{" "}
+						© therrelylifephotographie{" "}
+					</b>
 				</p>
-				<p href="https://www.instagram.com/therrelylifephotography/">
-					<b> © therrelylifephotgraphie </b>
-				</p>
+				<p></p>
 			</div>
 		</>
 	);

@@ -14,12 +14,12 @@
 		"facebook": "https://www.facebook.com/raphael.riviere.58",
 		"hobbies": "photographie, sports, simracing, moto, informatique ...",
 		"instagram": "https://www.instagram.com/therrelylifephotography/",
-		"personality": "Sérieux, sociable, travailleur, patient, pragmatique, autodidacte,résolveur de problèmes, j'adore résoudre des problèmes, casses têtes... Ma carrière dans l'automobile m'a poussé à rechercher une solution à tous les problèmes. Aujourd'hui je tourne la page pour un nouveau métier, une passion d'adolescents, et une de mes passions.",
+		"personality": "Sérieux, sociable, travailleur, patient, pragmatique, autodidacte. Je tourne la page de mon ancienne carrière dans l'automobile pour me lancer sur ce nouveau métier de développeur Web Fullstack !",
 		"img": "../src/assets/IMG_3880.webp"
 	},
 
 	"education": {
-		"wild": "09/2024 - 02/2025 => formation à la wild Code School de développeur Web et Web Application Bac +2 RNCP n° 37674 (HTML, CSS, JS, REACT,API web, Express.JS, Node.JS, Express.JS, router, SQL, méthode Agile / SCRUM, déploiement continu CI/CD Github et docker (en cours)",
+		"wild": "09/2024 - 02/2025 => formation à la wild Code School de développeur Web et Web Application Bac +2 RNCP n° 37674 (HTML, CSS, JS, REACT, Vite.JS, API web, Express.JS, Node.JS, router, SQL, Agile / SCRUM, déploiement continu CI/CD, Github, docker (EN COURS)",
 		"remap": "2015 => reprogrammation avancée moteur essence et diesel à Alientech France à Montans",
 		"tdra": "2010 => technicien de diagnostic et réparateur automobile à l'AFPA de Chartres",
 		"bacc": "2005 => baccalauréat scientifique option sciences de l'ingénieur au lycée de la Rivière (île de Réunion)"
@@ -45,7 +45,7 @@
 		"francais": "Francais => lu, écrit er parlé couramment",
 		"anglais": "Anglais => lu, écrit et parlé niveau scolaire",
 		"espagnol": "Espagnol => notion",
-		"logiciels": "logiciels divers du milieu informatique => Suite Office, Adobe Photoshop, Visual Studio Code, Git, Trello, Slack, github, Figma, WireFrame"
+		"logiciels": "Divers software => Suite Office, Adobe Photoshop, Visual Studio Code, Trello, Slack, Figma, WireFrame.cc, terminal et bien d'autres"
 	},
 
 	"projets": {
