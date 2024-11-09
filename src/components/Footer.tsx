@@ -1,6 +1,5 @@
 import reactLogo from "../assets/react.svg";
 import "../styles/Home.css";
-import { useState } from "react";
 
 function Footer() {
 	const handleClick = (url: string) => {

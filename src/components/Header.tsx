@@ -1,5 +1,4 @@
 import "../styles/Home.css";
-import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 function Header() {
@@ -21,7 +20,7 @@ function Header() {
 						<b>Resume</b>
 					</a>
 				</Link>
-				<Link to="projects">
+				<Link to="myprojects">
 					<a>
 						<b>Projects</b>
 					</a>

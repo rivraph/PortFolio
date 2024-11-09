@@ -2,9 +2,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import "./styles/Home.css";
-import datas from "./datas/datas.json";
 import Contact from "./pages/contactme.tsx";
-import Cv from "./pages/Cv.tsx";
+import Cv from "./pages/CvPage.tsx";
 import Projects from "./pages/myprojects.tsx";
 import Discoverme from "./pages/discoverme.tsx";
 import Header from "./components/Header.tsx";
@@ -27,7 +26,7 @@ const router = createBrowserRouter([
 				element: <Cv />,
 			},
 			{
-				path: "/mes projets",
+				path: "/myprojects",
 				element: <Projects />,
 			},
 			{
