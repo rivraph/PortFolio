@@ -1,65 +1,65 @@
 {
-"personality": {
-"title" : "Developpeur Web Full Stack", 
-"firstName": "Raphaël", 
-"lastName": "Rivière", 
-"age": "37", 
-"adresse": "13 rue des estivenques", 
-"permis": "B et A", 
-"city": "Gallargues le Montueux, France", 
-"telephone": "06 63 77 86 77", 
-"email": "raphael.riviere@gmail.com",
-"github":"https://github.com/rrczt974",
-"linkedin":"https://www.linkedin.com/in/rivière-raphaël-130b78151/",
-"facebook" : "https://www.facebook.com/raphael.riviere.58",
-"hobbies": "photographie, sports, simracing, moto, informatique ...",
-"instagram" : "https://www.instagram.com/therrelylifephotography/",
-"personality" : "Sérieux, sociable, travailleur, patient, pragmatique, autodidacte,résolveur de problèmes, j'adore résoudre des problèmes, casses têtes... Ma carrière dans l'automobile m'a poussé à rechercher une solution à tous les problèmes. Aujourd'hui je tourne la page pour un nouveau métier, une passion d'adolescents, et une de mes passions.",
-"img" : "../src/assets/IMG_3880.webp"},
+	"personality": {
+		"title": "Developpeur Web Full Stack",
+		"firstName": "Raphaël",
+		"lastName": "Rivière",
+		"age": "37",
+		"adresse": "13 rue des estivenques",
+		"permis": "B et A",
+		"city": "Gallargues le Montueux, France",
+		"telephone": "06 63 77 86 77",
+		"email": "raphael.riviere@gmail.com",
+		"github": "https://github.com/rrczt974",
+		"linkedin": "https://www.linkedin.com/in/rivière-raphaël-130b78151/",
+		"facebook": "https://www.facebook.com/raphael.riviere.58",
+		"hobbies": "photographie, sports, simracing, moto, informatique ...",
+		"instagram": "https://www.instagram.com/therrelylifephotography/",
+		"personality": "Sérieux, sociable, travailleur, patient, pragmatique, autodidacte,résolveur de problèmes, j'adore résoudre des problèmes, casses têtes... Ma carrière dans l'automobile m'a poussé à rechercher une solution à tous les problèmes. Aujourd'hui je tourne la page pour un nouveau métier, une passion d'adolescents, et une de mes passions.",
+		"img": "../src/assets/IMG_3880.webp"
+	},
 
-"education": {
-"wild": "09/2024 - 02/2025 => formation à la wild Code School de développeur Web et Web Application Bac +2 RNCP n° 37674 (HTML, CSS, JS, REACT,API web, Express.JS, Node.JS, Express.JS, router, SQL, méthode Agile / SCRUM, déploiement continu CI/CD Github et docker (en cours)",
-"remap": "2015 => reprogrammation avancée moteur essence et diesel à Alientech France à Montans",
-"tdra" : "2010 => technicien de diagnostic et réparateur automobile à l'AFPA de Chartres",
-"bacc": "2005 => baccalauréat scientifique option sciences de l'ingénieur au lycée de la Rivière (île de Réunion)"},
+	"education": {
+		"wild": "09/2024 - 02/2025 => formation à la wild Code School de développeur Web et Web Application Bac +2 RNCP n° 37674 (HTML, CSS, JS, REACT,API web, Express.JS, Node.JS, Express.JS, router, SQL, méthode Agile / SCRUM, déploiement continu CI/CD Github et docker (en cours)",
+		"remap": "2015 => reprogrammation avancée moteur essence et diesel à Alientech France à Montans",
+		"tdra": "2010 => technicien de diagnostic et réparateur automobile à l'AFPA de Chartres",
+		"bacc": "2005 => baccalauréat scientifique option sciences de l'ingénieur au lycée de la Rivière (île de Réunion)"
+	},
 
+	"experience": {
+		"bleulib": "Août 2024 => stage observation chez Bleu Libellule. Découverte du métier de webmaster et de développeur web",
 
+		"biomotors": "07/2021 - 05/2024 => technicien conseil et gestionnaire d'expertises",
 
-"experience":{
-"bleulib": "Août 2024 => stage observation chez Bleu Libellule. Découverte du métier de webmaster et de développeur web",
+		"kia1": "01/2018 - 06/2021 => Chef d'atelier, responsable magasin et pièces détachées, réception clientèle et entretien et réparations véhicules Kia",
 
-"biomotors": "07/2021 - 05/2024 => technicien conseil et gestionnaire d'expertises",
+		"kia2": "10/2012 - 05/2016 => Technicien avancé et en charge de l'entretien et la réparation des véhicules Kia",
 
-"kia1": "01/2018 - 06/2021 => Chef d'atelier, responsable magasin et pièces détachées, réception clientèle et entretien et réparations véhicules Kia",
+		"mecaperfs": "07/2016 - 12/2017 => Gérant entreprise individuelle en mécanique automobile, reprogrammation et solutions electroniques, pose d'accessoires et reventre de voitures d'occasion.",
 
-"kia2": "10/2012 - 05/2016 => Technicien avancé et en charge de l'entretien et la réparation des véhicules Kia",
+		"delko": "03/2012 - 09/2012 => Mécanicien multimarque",
 
-"mecaperfs" : "07/2016 - 12/2017 => Gérant entreprise individuelle en mécanique automobile, reprogrammation et solutions electroniques, pose d'accessoires et reventre de voitures d'occasion.",
+		"kia": "07/2010 - 01/2012 => Mécanicien multimarque chez un concessionnaire spécialisé KIA, Mitsubishi et Subaru"
+	},
 
-"delko" : "03/2012 - 09/2012 => Mécanicien multimarque",
+	"others": {
+		"francais": "Francais => lu, écrit er parlé couramment",
+		"anglais": "Anglais => lu, écrit et parlé niveau scolaire",
+		"espagnol": "Espagnol => notion",
+		"logiciels": "logiciels divers du milieu informatique => Suite Office, Adobe Photoshop, Visual Studio Code, Git, Trello, Slack, github, Figma, WireFrame"
+	},
 
-"kia" : "07/2010 - 01/2012 => Mécanicien multimarque chez un concessionnaire spécialisé KIA, Mitsubishi et Subaru"
-
-},
-
-"others":
-{"francais" : "Francais => lu, écrit er parlé couramment",
-"anglais": "Anglais => lu, écrit et parlé niveau scolaire",
-"espagnol": "Espagnol => notion",
-"logiciels": "logiciels divers du milieu informatique => Suite Office, Adobe Photoshop, Visual Studio Code, Git, Trello, Slack, github, Figma, WireFrame"},
-
-"projets" : {
-"projet1" : "solo Rush",
-"img1": "/src/assets/solo rush preview.png",
-"description1": "Projet challenge 1 journée réalisé en solo en html et CSS après 7 jours d'apprentissage au sein de la WCS (Wild Code School. Projet réalisé en 5H",
-"url1" : "https://rrczt974.github.io/SoloRush1-WCS/",
-"projet2" : "html & CSS",
-"img2": "/src/assets/Bienvenue à Bord.png",
-"description2": "Premier projet réalisé en 5 jours après 15 jours de formation",
-"url2": "https://rrczt974.github.io/Html-Css-Bienvenue-bord/",
-"projet3" : "Le P1 - Les petits frappés",
-"img3": "src/assets/Les-petits-frappés.png",
-"description3": "Premier projet de groupe mettant en oeuvre l'apprentissage du JS.",
-"url3":"https://wildcodeschool-2024-09.github.io/JS-RemoteFR-Vendangeurs-P1-Les-Frappes/"}
-
+	"projets": {
+		"projet1": "solo Rush",
+		"img1": "/src/assets/solo rush preview.png",
+		"description1": "Projet challenge 1 journée réalisé en solo en html et CSS après 7 jours d'apprentissage au sein de la WCS (Wild Code School. Projet réalisé en 5H",
+		"url1": "https://rrczt974.github.io/SoloRush1-WCS/",
+		"projet2": "html & CSS",
+		"img2": "/src/assets/Bienvenue à Bord.png",
+		"description2": "Premier projet réalisé en 5 jours après 15 jours de formation",
+		"url2": "https://rrczt974.github.io/Html-Css-Bienvenue-bord/",
+		"projet3": "Le P1 - Les petits frappés",
+		"img3": "src/assets/Les-petits-frappés.png",
+		"description3": "Premier projet de groupe mettant en oeuvre l'apprentissage du JS.",
+		"url3": "https://wildcodeschool-2024-09.github.io/JS-RemoteFR-Vendangeurs-P1-Les-Frappes/"
+	}
 }
