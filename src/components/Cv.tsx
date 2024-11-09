@@ -1,35 +1,65 @@
-function Resume ({education, experience, others}) {
+interface personalityprops {
+    Education: EducationProps;
+    Exp: ExpProps;
+    Others: OthersProps;
+}
+
+interface EducationProps {
+    wild: string;
+    remap: string;
+    tdra: string;
+    bacc: string;
+  }
+  
+  interface ExpProps {
+    bleulib: string;
+    biomotors: string;
+    kia1: string;
+    mecaperfs: string;
+    kia2: string;
+    delko: string;
+    kia: string;
+  }
+  
+  interface OthersProps {
+    logiciels: string;
+    francais: string;
+    anglais: string;
+    espagnol: string;
+  }
+
+function Resume ({Exp, Education, Others}: personalityprops) {
     
     return (
         <>
             <div className="infos">
             <h2 className="titleCard">Formations</h2>
-                <div class="cv-contener"> 
-                    <span>{education.wild}</span><br />
-                    <span>{education.remap}</span><br />
-                    <span>{education.tdra}</span><br />
-                    <span>{education.bacc}</span><br />
+                <div className="cv-contener"> 
+                    <span>{Education.wild}</span><br />
+                    <span>{Education.remap}</span><br />
+                    <span>{Education.tdra}</span><br />
+                    <span>{Education.bacc}</span><br />
                 </div>
             </div>
             <div className="infos">
             <h2 className="titleCard">Expériences Pro</h2>
-                <div class="cv-contener"> 
-                    <span>{experience.bleulib}</span><br />                    
-                    <span>{experience.biomotors}</span><br />
-                    <span>{experience.kia1}</span><br />
-                    <span>{experience.mecaperfs}</span><br />
-                    <span>{experience.kia2}</span><br />
-                    <span>{experience.delko}</span><br />
-                    <span>{experience.kia}</span><br />
+                <div className="cv-contener"> 
+                    <span>{Exp.bleulib}</span><br />                    
+                    <span>{Exp.biomotors}</span><br />
+                    <span>{Exp.kia1}</span><br />
+                    <span>{Exp.mecaperfs}</span><br />
+                    <span>{Exp.kia2}</span><br />
+                    <span>{Exp.delko}</span><br />
+                    <span>{Exp.kia}</span><br />
                 </div>
             </div>
             <div className="infos">
             <h2 className="titleCard">Autres compétences</h2>
-                <div class="cv-contener"> 
-                    <span>{others.logiciels}</span><br />
-                    <span>{others.francais}</span><br />
-                    <span>{others.anglais}</span><br />
-                    <span>{others.espagnol}</span><br />
+                <div className="cv-contener"> 
+                    <span>{Others.logiciels}</span><br />
+                    <span>{Others.francais}</span><br />
+                    <span>{Others.anglais}</span><br />
+                    <span>{Others.espagnol}</span><br />
                     
                 </div>
            </div>
@@ -37,4 +67,4 @@ function Resume ({education, experience, others}) {
     )
 }
 
-export default Resume
+export default Resume;
