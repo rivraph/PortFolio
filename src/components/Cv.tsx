@@ -4,7 +4,7 @@ function Resume ({education, experience, others}) {
         <>
             <div className="infos">
             <h2 className="titleCard">Formations</h2>
-                <div> 
+                <div class="cv-contener"> 
                     <span>{education.wild}</span><br />
                     <span>{education.remap}</span><br />
                     <span>{education.tdra}</span><br />
@@ -13,8 +13,8 @@ function Resume ({education, experience, others}) {
             </div>
             <div className="infos">
             <h2 className="titleCard">Expériences Pro</h2>
-                <div> 
-                    <span>{experience.bleulib}</span><br />
+                <div class="cv-contener"> 
+                    <span>{experience.bleulib}</span><br />                    
                     <span>{experience.biomotors}</span><br />
                     <span>{experience.kia1}</span><br />
                     <span>{experience.mecaperfs}</span><br />
@@ -25,7 +25,7 @@ function Resume ({education, experience, others}) {
             </div>
             <div className="infos">
             <h2 className="titleCard">Autres compétences</h2>
-                <div> 
+                <div class="cv-contener"> 
                     <span>{others.logiciels}</span><br />
                     <span>{others.francais}</span><br />
                     <span>{others.anglais}</span><br />

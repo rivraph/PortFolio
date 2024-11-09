@@ -15,10 +15,10 @@
 "hobbies": "photographie, sports, simracing, moto, informatique ...",
 "instagram" : "https://www.instagram.com/therrelylifephotography/",
 "personality" : "Sérieux, sociable, travailleur, patient, pragmatique, autodidacte,résolveur de problèmes, j'adore résoudre des problèmes, casses têtes... Ma carrière dans l'automobile m'a poussé à rechercher une solution à tous les problèmes. Aujourd'hui je tourne la page pour un nouveau métier, une passion d'adolescents, et une de mes passions.",
-"img" : "../src/assets/IMG_3880.PNG"},
+"img" : "../src/assets/IMG_3880.webp"},
 
 "education": {
-"wild": "09/2024 - 02/2025 => formation à la wild Code School de développeur Web et Web Application Bac +2 RNCP n° 37674 (HTML, CSS, JS, REACT,API web, Express.JS, SQL, méthodes Agile, déploiement continu CI/CD Github et docker (en cours)",
+"wild": "09/2024 - 02/2025 => formation à la wild Code School de développeur Web et Web Application Bac +2 RNCP n° 37674 (HTML, CSS, JS, REACT,API web, Express.JS, Node.JS, Express.JS, router, SQL, méthode Agile / SCRUM, déploiement continu CI/CD Github et docker (en cours)",
 "remap": "2015 => reprogrammation avancée moteur essence et diesel à Alientech France à Montans",
 "tdra" : "2010 => technicien de diagnostic et réparateur automobile à l'AFPA de Chartres",
 "bacc": "2005 => baccalauréat scientifique option sciences de l'ingénieur au lycée de la Rivière (île de Réunion)"},
@@ -46,14 +46,20 @@
 {"francais" : "Francais => lu, écrit er parlé couramment",
 "anglais": "Anglais => lu, écrit et parlé niveau scolaire",
 "espagnol": "Espagnol => notion",
-"logiciels": "logiciels divers du milieu informatique => Suite Office, Adobe Photoshop, Visual Studio Code, Git, Trello, Slack, github"},
+"logiciels": "logiciels divers du milieu informatique => Suite Office, Adobe Photoshop, Visual Studio Code, Git, Trello, Slack, github, Figma, WireFrame"},
 
 "projets" : {
 "projet1" : "solo Rush",
-"img1": "../assets/solo rush preview.png",
+"img1": "/src/assets/solo rush preview.png",
+"description1": "Projet challenge 1 journée réalisé en solo en html et CSS après 7 jours d'apprentissage au sein de la WCS (Wild Code School. Projet réalisé en 5H",
+"url1" : "https://rrczt974.github.io/SoloRush1-WCS/",
 "projet2" : "html & CSS",
-"img2": "",
-"projet3" : "Le P1",
-"img3": ""}
+"img2": "/src/assets/Bienvenue à Bord.png",
+"description2": "Premier projet réalisé en 5 jours après 15 jours de formation",
+"url2": "https://rrczt974.github.io/Html-Css-Bienvenue-bord/",
+"projet3" : "Le P1 - Les petits frappés",
+"img3": "src/assets/Les-petits-frappés.png",
+"description3": "Premier projet de groupe mettant en oeuvre l'apprentissage du JS.",
+"url3":"https://wildcodeschool-2024-09.github.io/JS-RemoteFR-Vendangeurs-P1-Les-Frappes/"}
 
 }
