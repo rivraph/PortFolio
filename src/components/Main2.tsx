@@ -54,15 +54,15 @@ function Main2() {
 					<h3>Contact me</h3>
 					<span className="spancontact">
 						<a href={email}>Email 📨</a> |
-						<a href={github} target="_blank">
+						<a href={github} rel="noreferrer" target="_blank">
 							Github
 						</a>{" "}
 						|
-						<a href={linkedin} target="_blank">
+						<a href={linkedin} rel="noreferrer" target="_blank">
 							linkedin
 						</a>{" "}
 						|
-						<a href={facebook} target="_blank">
+						<a href={facebook} rel="noreferrer" target="_blank">
 							facebook
 						</a>{" "}
 						|
