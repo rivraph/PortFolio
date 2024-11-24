@@ -1,0 +1,51 @@
+.infos {
+	gap: 1.5rem;
+	text-align: left;
+	padding: 2% 7% 5% 7%;
+	margin-left: 3rem;
+	border-radius: 50px;
+	max-width: 75vw;
+	max-height: 80vh;
+	font-size: 15px;
+	box-shadow: 2px 2px 1px white;
+	text-shadow: 5px 5px 5px 10px black;
+	text-rendering: optimizeSpeed;
+	background-color: #3741589c;
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		padding: 5%;
+		margin-left: 10%;
+		width: 80%;
+	}
+	@media screen and (min-width: 979px) {
+		padding: 2%;
+		margin-left: 9%;
+		gap: 0;
+	}
+}
+
+.titleCard {
+	text-align: center;
+	font-size: 25px;
+	margin-bottom: 5%;
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		font-size: 40px;
+		padding: 0;
+	}
+	@media screen and (min-width: 979px) {
+		font-size: 80px;
+	}
+}
+
+.cvContener {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	font-size: 14px;
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		font-size: 18px;
+		padding: 0;
+	}
+	@media screen and (min-width: 979px) {
+		font-size: 2em;
+	}
+}

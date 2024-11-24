@@ -19,26 +19,26 @@
 	},
 
 	"education": {
-		"wild": "09/2024 - 02/2025 => formation à la wild Code School de développeur Web et Web Application Bac +2 RNCP n° 37674 (HTML, CSS, JS, REACT, Vite.JS, API web, Express.JS, Node.JS, router, SQL, Agile / SCRUM, déploiement continu CI/CD, Github, docker (EN COURS)",
+		"wild": "09/2024 - 02/2025 => formation à la wild Code School en tant que développeur Web et Web Application Bac +2 RNCP n° 37674 (HTML, CSS, JS, REACT, Vite.JS, TypeScript, API web, Express.JS, Node.JS, router, SQL, Agile / SCRUM, déploiement continu CI/CD, Github, docker (EN COURS)",
 		"remap": "2015 => reprogrammation avancée moteur essence et diesel à Alientech France à Montans",
 		"tdra": "2010 => technicien de diagnostic et réparateur automobile à l'AFPA de Chartres",
 		"bacc": "2005 => baccalauréat scientifique option sciences de l'ingénieur au lycée de la Rivière (île de Réunion)"
 	},
 
 	"experience": {
-		"bleulib": "Août 2024 => stage observation chez Bleu Libellule. Découverte du métier de webmaster et de développeur web",
+		"bleulib": "AOUT 2024 => stage observation développeur Web à Bleu Libellule",
 
-		"biomotors": "07/2021 - 05/2024 => technicien conseil et gestionnaire d'expertises",
+		"biomotors": "07/2021 - 05/2024 => Technicien conseil et gestionnaire d'expertises",
 
-		"kia1": "01/2018 - 06/2021 => Chef d'atelier, responsable magasin et pièces détachées, réception clientèle et entretien et réparations véhicules Kia",
+		"kia1": "01/2018 - 06/2021 => Chef d'atelier, resp. magasin pièces détachées, réceptionaire, technicien et mécanicien",
 
-		"kia2": "10/2012 - 05/2016 => Technicien avancé et en charge de l'entretien et la réparation des véhicules Kia",
+		"kia2": "10/2012 - 05/2016 => Technicien avancé et mécanicien",
 
-		"mecaperfs": "07/2016 - 12/2017 => Gérant entreprise individuelle en mécanique automobile, reprogrammation et solutions electroniques, pose d'accessoires et reventre de voitures d'occasion.",
+		"mecaperfs": "07/2016 - 12/2017 => Gérant entreprise mécanique automobile, reprogrammateur moteur, accessoiriste et vendeur VO.",
 
-		"delko": "03/2012 - 09/2012 => Mécanicien multimarque",
+		"delko": "03/2012 - 09/2012 => Mécanicien",
 
-		"kia": "07/2010 - 01/2012 => Mécanicien multimarque chez un concessionnaire spécialisé KIA, Mitsubishi et Subaru"
+		"kia": "07/2010 - 01/2012 => Préparateur VO et Mécanicien automobile"
 	},
 
 	"others": {
@@ -57,9 +57,13 @@
 		"img2": "/src/assets/Bienvenue à Bord.png",
 		"description2": "Premier projet réalisé en 5 jours après 15 jours de formation",
 		"url2": "https://rrczt974.github.io/Html-Css-Bienvenue-bord/",
-		"projet3": "Le P1 - Les petits frappés",
+		"projet3": "Les petits frappés",
 		"img3": "src/assets/Les-petits-frappés.png",
 		"description3": "Premier projet de groupe mettant en oeuvre l'apprentissage du JS.",
-		"url3": "https://wildcodeschool-2024-09.github.io/JS-RemoteFR-Vendangeurs-P1-Les-Frappes/"
+		"url3": "https://wildcodeschool-2024-09.github.io/JS-RemoteFR-Vendangeurs-P1-Les-Frappes/",
+		"projet4": "DevRAP",
+		"img4": "src/assets/en-travaux.webp",
+		"description4": "Premier projet CREATE REACT APP.",
+		"url4": "come soon"
 	}
 }
