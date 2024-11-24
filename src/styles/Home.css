@@ -5,7 +5,7 @@
 	--color4-: #7f5056;
 	--color5-: #d76c58;
 	--color6-: hsla(214, 35%, 68%, 0.548);
-	--color7-: ;
+	--color7-: black;
 }
 
 #root {
@@ -50,7 +50,7 @@ h3 {
 
 h3:hover,
 h2:hover {
-	text-shadow: 5px 5px 25px var(--color4-);
+	text-shadow: 5px 5px 15px black;
 }
 
 .separate {
@@ -67,7 +67,6 @@ h2:hover {
 	}
 	@media screen and (min-width: 979px) {
 		margin: 2.5% 0 2.5% 13%;
-		
 	}
 }
 
@@ -79,7 +78,6 @@ h2:hover {
 	width: auto;
 	height: 150px;
 	align-items: center;
-
 	@media screen and (min-width: 979px) {
 		flex-direction: row;
 	}
@@ -133,7 +131,7 @@ nav a {
 }
 
 nav a:hover {
-	scale: 1.2;
+	scale: 1.1;
 	will-change: filter;
 	transition: filter 700ms;
 	text-shadow: 0 0 0.7em black;
@@ -184,7 +182,7 @@ ul {
 	height: auto;
 	margin: 1%;
 	will-change: filter;
-	transition: filter 1000ms ;
+	transition: filter 1000ms;
 	z-index: 0;
 	@media screen and (min-width: 768px) and (max-width: 979px) {
 		width: 35%;
@@ -226,7 +224,7 @@ ul {
 .personalityProfil {
 	font-size: 24px;
 	font-family: edu-au-vic-wa-nt-guides;
-	background-color: var(--color6-);
+	background-color: #3741589c;
 	border-radius: 25px;
 	border-style: groove solid;
 	text-align: left;
@@ -251,6 +249,9 @@ ul {
 	filter: drop-shadow(0 0 1em white);
 }
 
+
+/* Card RESUME */
+
 .resumeCard {
 	display: flex;
 	justify-content: center;
@@ -270,7 +271,6 @@ ul {
 	}
 }
 
-
 .cardsPosition {
 	display: flex;
 	justify-content: center;
@@ -278,6 +278,7 @@ ul {
 	flex-direction: column;
 	gap: 2em;
 }
+
 @media screen and (min-width: 768px) and (max-width: 979px) {
 	#cardsPosition {
 		display: flex;
@@ -294,7 +295,6 @@ ul {
 		align-items: flex-start;
 	}
 }
-
 
 /* Figure de PROJETS */
 figure.card {
@@ -316,6 +316,11 @@ figure.card {
 	}
 }
 
+h2.titleCard {
+	font-size: 30px;
+	text-shadow: 0 0 0.5em black;
+	width: 70%;
+}
 .cardImage {
 	box-shadow: 10px 10px 40px 5px white;
 	border-radius: 20px;
@@ -331,7 +336,7 @@ figure.card {
 	width: 80%;
 	margin: 5%;
 	padding: 5px;
-	background-color: #61dafbaa;
+	background-color: #3741589c;
 	border-radius: 10px;
 	border-style: groove solid;
 	text-align: center;
@@ -375,19 +380,19 @@ span a {
 	@media screen and (min-width: 768px) and (max-width: 979px) {
 		font-size: 35px;
 	}
-  @media screen and (min-width: 979px) {
-    font-size: 2em;
-  }
+	@media screen and (min-width: 979px) {
+		font-size: 2em;
+	}
 }
 
 .spancontact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.9em;
-  @media screen and (min-width: 979px) {
-    gap: 1.5em;
-  }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.9em;
+	@media screen and (min-width: 979px) {
+		gap: 1.5em;
+	}
 }
 .react {
 	will-change: filter;
@@ -428,12 +433,11 @@ span a {
 		font-size: 35px;
 		flex-wrap: wrap;
 	}
-  @media screen and (min-width: 979px) {
-    font-size: 30px;
-    
-  }
+	@media screen and (min-width: 979px) {
+		font-size: 30px;
+	}
 }
 
 #therrelylife:hover {
-  cursor: pointer;
+	cursor: pointer;
 }

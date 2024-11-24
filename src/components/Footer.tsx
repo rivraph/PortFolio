@@ -10,7 +10,12 @@ function Footer() {
 	return (
 		<>
 			<div className="footer">
-				<a href="https://react.dev" target="_blank" className="react">
+				<a
+					href="https://react.dev"
+					target="_blank"
+					className="react"
+					rel="noreferrer"
+				>
 					<img src={reactLogo} alt="React logo" />
 				</a>
 				<p className="read-the-docs">

@@ -1,10 +1,9 @@
 import "../styles/Home.css";
-import styles from './Main2.module.css';
 import datas from "../datas/datas.json";
 import Cards from "./Cards";
 import Resume from "./Cv";
+import styles from "./Main2.module.css";
 import Swipper from "./swiperResume";
-
 
 function Main2() {
 	const {
@@ -18,11 +17,10 @@ function Main2() {
 		github,
 		linkedin,
 		facebook,
-	} = datas.personality
+	} = datas.personality;
 	const education = datas.education;
 	const experience = datas.experience;
 	const others = datas.others;
-	
 
 	return (
 		<>
@@ -38,7 +36,7 @@ function Main2() {
 				<div className={styles.swipperContainer}>
 					<Swipper />
 				</div>
-				
+
 				<div className="separate"> </div>
 				<div className="cardsPosition">
 					<h3>Projects</h3>
@@ -65,7 +63,7 @@ function Main2() {
 						</a>{" "}
 						|
 					</span>
-				</div>	
+				</div>
 			</div>
 		</>
 	);

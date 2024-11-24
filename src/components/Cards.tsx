@@ -22,6 +22,12 @@ function Cards() {
 			description: data.description3,
 			url: data.url3,
 		},
+		{
+			projet: data.projet4,
+			img: data.img4,
+			description: data.description4,
+			url: data.url4,
+		},
 	];
 	console.log(data.img1);
 

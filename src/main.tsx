@@ -1,13 +1,13 @@
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import "./styles/Home.css";
-import Contact from "./pages/contactme.tsx";
-import Cv from "./pages/CvPage.tsx";
-import Projects from "./pages/myprojects.tsx";
-import Discoverme from "./pages/discoverme.tsx";
 import Header from "./components/Header.tsx";
+import Cv from "./pages/CvPage.tsx";
 import Home from "./pages/Home.tsx";
+import Contact from "./pages/contactme.tsx";
+import Discoverme from "./pages/discoverme.tsx";
+import Projects from "./pages/myprojects.tsx";
 
 const router = createBrowserRouter([
 	{
