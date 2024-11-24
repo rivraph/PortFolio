@@ -23,12 +23,14 @@
 
 		height: auto;
 	}
-	background-image: url("./assets/PAN9008.webp");
+	background-image: radial-gradient(rgba(255, 255, 255, 0.818), #4c75a3aa), url("./assets/background1.jpg");
+	background: opacity(50%);
 	background-position-y: top;
 	background-attachment: fixed;
 	background-position: center;
-	background-size: 98vw 85vh;
+	background-size: 100%;
 	background-repeat: no-repeat;
+	
 }
 
 @tailwind base;
@@ -41,7 +43,6 @@ Body {
 	display: flex;
 	place-items: center;
 	flex-direction: column;
-
 	width: 100px;
 }
 

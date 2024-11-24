@@ -1,7 +1,9 @@
 import "../styles/Home.css";
+import styles from './Main2.module.css';
 import datas from "../datas/datas.json";
 import Cards from "./Cards";
 import Resume from "./Cv";
+import Swipper from "./swiperResume";
 
 
 function Main2() {
@@ -33,14 +35,10 @@ function Main2() {
 					<p className="personalityProfil">{personality}</p>
 				</div>
 				<div className="separate"> </div>
-				<div className="resumeCard">
-					<h3>Resume</h3>
-					<Resume 
-						Exp={experience} 
-						Education={education}
-						Others={others}
-					/>
+				<div className={styles.swipperContainer}>
+					<Swipper />
 				</div>
+				
 				<div className="separate"> </div>
 				<div className="cardsPosition">
 					<h3>Projects</h3>
@@ -54,20 +52,20 @@ function Main2() {
 					<h3>Contact me</h3>
 					<span className="spancontact">
 						<a href={email}>Email 📨</a> |
-						<a href={github} target="_blank">
+						<a href={github} rel="noreferrer" target="_blank">
 							Github
 						</a>{" "}
 						|
-						<a href={linkedin} target="_blank">
+						<a href={linkedin} rel="noreferrer" target="_blank">
 							linkedin
 						</a>{" "}
 						|
-						<a href={facebook} target="_blank">
+						<a href={facebook} rel="noreferrer" target="_blank">
 							facebook
 						</a>{" "}
 						|
 					</span>
-				</div>
+				</div>	
 			</div>
 		</>
 	);

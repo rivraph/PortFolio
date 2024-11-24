@@ -5,7 +5,7 @@
 	--color4-: #7f5056;
 	--color5-: #d76c58;
 	--color6-: hsla(214, 35%, 68%, 0.548);
-	--color7-: #61dafbaa;
+	--color7-: ;
 }
 
 #root {
@@ -63,7 +63,7 @@ h2:hover {
 	padding-left: 5%;
 	@media screen and (min-width: 768px) and (max-width: 979px) {
 		margin: 5%;
-		padding-left: 12%;
+		margin-left: 12%;
 	}
 	@media screen and (min-width: 979px) {
 		margin: 2.5% 0 2.5% 13%;
@@ -184,7 +184,7 @@ ul {
 	height: auto;
 	margin: 1%;
 	will-change: filter;
-	transition: filter 1000ms;
+	transition: filter 1000ms ;
 	z-index: 0;
 	@media screen and (min-width: 768px) and (max-width: 979px) {
 		width: 35%;
@@ -208,6 +208,7 @@ ul {
 	font-size: 25px;
 	text-shadow: 1px 1px 8px var(--color7-);
 	width: 75vw;
+	animation: 3s infinite alternate slidein;
 	@media screen and (min-width: 768px) and (max-width: 979px) {
 		font-size: 35px;
 	}
@@ -269,39 +270,6 @@ ul {
 	}
 }
 
-.titleCard {
-	text-align: center;
-	font-size: 25px;
-	margin-bottom: 5%;
-	@media screen and (min-width: 768px) and (max-width: 979px) {
-		font-size: 30px;
-		padding: 0;
-	}
-	@media screen and (min-width: 979px) {
-		font-size: 2.6em;
-	}
-}
-
-.infos {
-	width: 75%;
-	gap: 1.5rem;
-	text-align: left;
-	padding: 10%;
-	border-radius: 50px;
-	box-shadow: 2px 2px 1px white;
-	text-shadow: 5px 5px 5px 10px black;
-	text-rendering: optimizeSpeed;
-	background-color: #3741589c;
-	@media screen and (min-width: 768px) and (max-width: 979px) {
-		padding: 5%;
-		font-size: 20px;
-		width: 60%;
-	}
-	@media screen and (min-width: 979px) {
-		width: 25%;
-		padding: 2%;
-	}
-}
 
 .cardsPosition {
 	display: flex;
@@ -327,11 +295,6 @@ ul {
 	}
 }
 
-.cv-contener {
-	display: flex;
-	flex-direction: column;
-  gap: 1rem;
-}
 
 /* Figure de PROJETS */
 figure.card {
