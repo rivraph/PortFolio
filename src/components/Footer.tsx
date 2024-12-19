@@ -1,4 +1,4 @@
-import reactLogo from "/public/assets/react.svg";
+import reactLogo from "/assets/react.svg";
 import "../styles/Home.css";
 
 function Footer() {
