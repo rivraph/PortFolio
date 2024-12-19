@@ -15,7 +15,7 @@
 		"hobbies": "photographie, sports, simracing, moto, informatique ...",
 		"instagram": "https://www.instagram.com/therrelylifephotography/",
 		"personality": "Sérieux, sociable, travailleur, patient, pragmatique, autodidacte. Je tourne la page de mon ancienne carrière dans l'automobile pour me lancer sur ce nouveau métier de développeur Web Fullstack !",
-		"img": "public/IMG_3880.webp"
+		"img": "public/assets/IMG_3880.webp"
 	},
 
 	"education": {
@@ -50,15 +50,15 @@
 
 	"projets": {
 		"projet1": "solo Rush",
-		"img1": "public/solo rush preview.png",
+		"img1": "public/assets/solo rush preview.png",
 		"description1": "Projet challenge 1 journée réalisé en solo en html et CSS après 7 jours d'apprentissage au sein de la WCS (Wild Code School. Projet réalisé en 5H",
 		"url1": "https://rrczt974.github.io/SoloRush1-WCS/",
 		"projet2": "html & CSS",
-		"img2": "public/Bienvenue à Bord.png",
+		"img2": "public/assets/Bienvenue à Bord.png",
 		"description2": "Premier projet réalisé en 5 jours après 15 jours de formation",
 		"url2": "https://rrczt974.github.io/Html-Css-Bienvenue-bord/",
 		"projet3": "Le P1 - Les petits frappés",
-		"img3": "public/Les-petits-frappés.png",
+		"img3": "public/assets/Les-petits-frappés.png",
 		"description3": "Premier projet de groupe mettant en oeuvre l'apprentissage du JS.",
 		"url3": "https://wildcodeschool-2024-09.github.io/JS-RemoteFR-Vendangeurs-P1-Les-Frappes/"
 	}
