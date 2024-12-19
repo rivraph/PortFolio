@@ -23,7 +23,7 @@
 
 		height: auto;
 	}
-	background-image: url("public/assets/background4.png");
+	background-image: url("/assets/background4.png");
 	background-position-y: top;
 	background-attachment: fixed;
 	background-position: center;
