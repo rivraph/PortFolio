@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage" : "https://rrdevelopment.github.io/portefolio",
+  "homepage" : "https://port-folio-raphael-riviere.vercel.app",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
