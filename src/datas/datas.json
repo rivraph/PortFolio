@@ -52,14 +52,18 @@
 		"projet1": "solo Rush",
 		"img1": "/assets/solo rush preview.png",
 		"description1": "Projet challenge 1 journée réalisé en solo en html et CSS après 7 jours d'apprentissage au sein de la WCS (Wild Code School. Projet réalisé en 5H",
-		"url1": "https://rrczt974.github.io/SoloRush1-WCS/",
+		"url1": "https://github.com/rivraph/SoloRush1-WCS",
 		"projet2": "html & CSS",
 		"img2": "/assets/Bienvenue à Bord.png",
 		"description2": "Premier projet réalisé en 5 jours après 15 jours de formation",
-		"url2": "https://rrczt974.github.io/Html-Css-Bienvenue-bord/",
+		"url2": "https://github.com/rivraph/Html-Css-Bienvenue-bord",
 		"projet3": "Le P1 - Les petits frappés",
 		"img3": "/assets/Les-petits-frappés.png",
 		"description3": "Premier projet de groupe mettant en oeuvre l'apprentissage du JS.",
-		"url3": "https://wildcodeschool-2024-09.github.io/JS-RemoteFR-Vendangeurs-P1-Les-Frappes/"
+		"url3": "https://github.com/rivraph/JS-RemoteFR-Vendangeurs-P1-Les-Frappes",
+		"projet4": "Le P2 - DevRAP",
+		"img4": "/assets/DevRAP.png",
+		"description4": "Second projet de groupe mettant en fonction le fonctionne AGILE, REACT, Express, les API ... ",
+		"url4": "https://github.com/rivraph/P2-DevRAP"
 	}
 }
