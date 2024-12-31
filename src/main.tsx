@@ -6,8 +6,7 @@ import Contact from "./pages/contactme.tsx";
 import Projects from "./pages/myprojects.tsx";
 import Discoverme from "./pages/discoverme.tsx";
 import Header from "./components/Header.tsx";
-import Home from "./pages/Home.tsx";
-import CvPage from "./pages/CvPage.tsx";
+import Cv from "./pages/CvPage.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -17,7 +16,7 @@ const router = createBrowserRouter([
                 element: <Discoverme />,
             },
 			{
-				path: "/home",
+				path: "/Discoverme",
 				element: <Discoverme />,
 			},
 			{
@@ -26,7 +25,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/cv",
-				element: <CvPage />,
+				element: <Cv />,
 			},
 			{
 				path: "/myprojects",

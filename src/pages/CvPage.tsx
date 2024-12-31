@@ -2,37 +2,8 @@ import datas from "../datas/datas.json";
 import "../styles/Home.css";
 import { useState } from "react";
 
-interface personalityprops {
-Education: EducationProps;
-Exp: ExpProps;
-Others: OthersProps;
-}
 
-interface EducationProps {
-wild: string;
-remap: string;
-tdra: string;
-bacc: string;
-}
-
-interface ExpProps {
-bleulib: string;
-biomotors: string;
-kia1: string;
-mecaperfs: string;
-kia2: string;
-delko: string;
-kia: string;
-}
-
-interface OthersProps {
-logiciels: string;
-francais: string;
-anglais: string;
-espagnol: string;
-}
-
-function Cv ({Exp, Education, Others}: personalityprops) {
+function Cv () {
     const exp = datas.experience;
 	const Edu = datas.education;
 	const Oth = datas.others;
@@ -47,7 +18,8 @@ function Cv ({Exp, Education, Others}: personalityprops) {
     return (
         <div className="principalCv">
             <div className="infos">
-            <h2 className="titleCard" onClick={() => toggleSection("formation")} style={{ cursor: "pointer" }}
+            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+            <h2 className="titleCard"  style={{ cursor: "pointer" }} onClick={() => toggleSection("formation")}
                 >Formations</h2>
                 {visibleSection === "formation" && (
                 <div className="cv-contener"> 
@@ -59,6 +31,7 @@ function Cv ({Exp, Education, Others}: personalityprops) {
                 )}
             </div>
             <div className="infos">
+            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
             <h2 className="titleCard" onClick={() => toggleSection("experiences")}
           style={{ cursor: "pointer" }}>Expériences Pro</h2>
           {visibleSection === "experiences" && (
@@ -74,6 +47,7 @@ function Cv ({Exp, Education, Others}: personalityprops) {
           )}
             </div>
             <div className="infos">
+            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
             <h2 className="titleCard" onClick={() => toggleSection("competences")}
           style={{ cursor: "pointer" }}>Autres compétences</h2>
           {visibleSection === "competences" && (
