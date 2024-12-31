@@ -37,13 +37,13 @@ h3 {
 	color: var(--color7-);
 	z-index: 5;
 	@media screen and (min-width: 768px) and (max-width: 979px) {
-		font-size: 70px;
+		font-size: 40px;
 	}
 	@media screen and (min-width: 979px) {
 		width: 100%;
 	}
 	@media screen and (min-width: 979px) {
-		font-size: 80px;
+		font-size: 50px;
 		width: 100%;
 	}
 }
@@ -282,11 +282,25 @@ ul {
 	}
 }
 
+.principalCv {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2em;
+}
+
+.projectprincipal {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2em;
+}
+
 .infos {
-	width: 75%;
+	width: 80%;
 	gap: 1.5rem;
 	text-align: left;
-	padding: 10%;
+	padding: 8%;
 	border-radius: 50px;
 	box-shadow: 2px 2px 1px white;
 	text-shadow: 5px 5px 5px 10px black;
@@ -410,7 +424,7 @@ span a {
 	color: white;
 	box-shadow: 0 5px 5px var(--color7-);
 	@media screen and (min-width: 768px) and (max-width: 979px) {
-		font-size: 35px;
+		font-size: 25px;
 	}
   @media screen and (min-width: 979px) {
     font-size: 2em;
@@ -462,11 +476,11 @@ span a {
 	padding-left: 20px;
 	padding-top: 25px;
 	@media screen and (min-width: 768px) and (max-width: 979px) {
-		font-size: 35px;
+		font-size: 20px;
 		flex-wrap: wrap;
 	}
   @media screen and (min-width: 979px) {
-    font-size: 30px;
+    font-size: 25px;
     
   }
 }

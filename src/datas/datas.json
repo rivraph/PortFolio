@@ -14,7 +14,7 @@
 		"facebook": "https://www.facebook.com/raphael.riviere.58",
 		"hobbies": "photographie, sports, simracing, moto, informatique ...",
 		"instagram": "https://www.instagram.com/therrelylifephotography/",
-		"personality": "Sérieux, sociable, travailleur, patient, pragmatique, autodidacte. Je tourne la page de mon ancienne carrière dans l'automobile pour me lancer sur ce nouveau métier de développeur Web Fullstack !",
+		"personality": "Sérieux, bosseur, pragmatique, dévoué et prêt à tout pour réussir en tant que développeur Web Fullstack !",
 		"img": "/assets/IMG_3880.webp"
 	},
 
@@ -57,13 +57,17 @@
 		"img2": "/assets/Bienvenue à Bord.png",
 		"description2": "Premier projet réalisé en 5 jours après 15 jours de formation",
 		"url2": "https://github.com/rivraph/Html-Css-Bienvenue-bord",
-		"projet3": "Le P1 - Les petits frappés",
+		"projet3": "P1 - Les petits frappés",
 		"img3": "/assets/Les-petits-frappés.png",
 		"description3": "Premier projet de groupe mettant en oeuvre l'apprentissage du JS.",
 		"url3": "https://github.com/rivraph/JS-RemoteFR-Vendangeurs-P1-Les-Frappes",
-		"projet4": "Le P2 - DevRAP",
+		"projet4": "P2 - DevRAP",
 		"img4": "/assets/DevRAP.png",
 		"description4": "Second projet de groupe mettant en fonction le fonctionne AGILE, REACT, Express, les API ... ",
-		"url4": "https://github.com/rivraph/P2-DevRAP"
+		"url4": "https://github.com/rivraph/P2-DevRAP",
+		"projet5": "P3 - Arcadia",
+		"img5": "En cours de création",
+		"description5": "3e projet mélangeant Back et Front. Site de jeux d'arcade.",
+		"url5": "Lien non dispo"
 	}
 }

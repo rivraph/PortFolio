@@ -7,7 +7,7 @@ function Home() {
 	return (
 		<>
 			<Main2 />
-			<Footer />
+			
 		</>
 	);
 }

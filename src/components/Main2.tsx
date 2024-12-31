@@ -25,23 +25,11 @@ function Main2() {
 	return (
 		<>
 			<div className="MainContener">
-				<div className="profil">
-					<img src={img} width="35%" className="logo" alt="moi" />
-					<h1 className="titleProfil">
-						Je me présente, {firstName} {lastName}, {age}ans, {title}
-					</h1>
-					<p className="personalityProfil">{personality}</p>
-				</div>
+				
 				<div className="separate"> </div>
-				<div className="resumeCard">
-					<h3>Resume</h3>
-					<Resume 
-						Exp={experience} 
-						Education={education}
-						Others={others}
-					/>
+				
 				</div>
-				<div className="separate"> </div>
+				
 				<div className="cardsPosition">
 					<h3>Projects</h3>
 					<div id="cardsPosition">
@@ -50,25 +38,8 @@ function Main2() {
 				</div>
 				<div className="separate"> </div>
 
-				<div className="contact">
-					<h3>Contact me</h3>
-					<span className="spancontact">
-						<a href={email}>Email 📨</a> |
-						<a href={github} target="_blank">
-							Github
-						</a>{" "}
-						|
-						<a href={linkedin} target="_blank">
-							linkedin
-						</a>{" "}
-						|
-						<a href={facebook} target="_blank">
-							facebook
-						</a>{" "}
-						|
-					</span>
-				</div>
-			</div>
+				
+			
 		</>
 	);
 }
