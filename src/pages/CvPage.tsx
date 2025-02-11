@@ -20,7 +20,7 @@ function Cv () {
             <div className="infos">
             {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
             <h2 className="titleCard"  style={{ cursor: "pointer" }} onClick={() => toggleSection("formation")}
-                >Formations</h2>
+                > Mes formations</h2>
                 {visibleSection === "formation" && (
                 <div className="cv-contener"> 
                     <span>{Edu.wild}</span><br />

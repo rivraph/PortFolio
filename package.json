@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage" : "https://port-folio-raphael-riviere.vercel.app",
+  "homepage": "https://port-folio-raphael-riviere.vercel.app",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -12,7 +12,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "postinstall": "node -e \"if (process.env.NODE_ENV === 'production'){process.exit(1)} \" || husky install"
-  }, 
+  },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

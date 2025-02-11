@@ -44,7 +44,6 @@ function Footer() {
 						© therrelylifephotographie{" "}
 					</b>
 				</p>
-				<p> </p>
 			</div>
 		</>
 	);
