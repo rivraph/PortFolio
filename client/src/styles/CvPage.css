@@ -44,3 +44,21 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+.cvButton {
+  background-color: var(--color3-);
+  color: white;
+  border-radius: 2em;
+  box-shadow: 0 5px 5px var(--color7-);
+  cursor: pointer;
+  position: relative;
+  right: 1vw;
+  padding: 12%;
+  transition: background-color 300ms, color 300ms;
+  font-size: 180%;
+}
+
+.cvButton:hover {
+  background-color: var(--color8-);
+  color: var(--color7-);
+}

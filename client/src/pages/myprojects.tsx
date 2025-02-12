@@ -1,6 +1,7 @@
 import { useState } from "react";
 import datas from "../datas/datas.json";
 import "../styles/Myprojects.css";
+import { Link } from "react-router-dom";
 
 const data = datas.projets;
 
@@ -56,39 +57,44 @@ function Projects() {
   };
 
   return (
-    <div className="projectprincipal">
-      {projects.map((project, index) => (
-        <figure className="cardProject" key={1}>
-          <h2
-            className="titleCardProject"
-            onClick={() => toggleVisibility(index)}
-            style={{ cursor: "pointer" }}
-            onKeyDown={onKeyDown}
-          >
-            {project.projet}
-          </h2>
-          {visibleProjects === index && (
-            <>
-              <img
-                className="cardImage"
-                src={project.img}
-                alt="représentation du projet"
-              />
-              <figcaption className="cardDescription">
-                {project.description}
-              </figcaption>
-              <button
-                className="cardButton"
-                type="button"
-                onClick={() => handleClick(project.url)}
-              >
-                Github link
-              </button>
-            </>
-          )}
-        </figure>
-      ))}
-    </div>
+    <>
+      <div className="projectprincipal">
+        {projects.map((project, index) => (
+          <figure className="cardProject" key={1}>
+            <h2
+              className="titleCardProject"
+              onClick={() => toggleVisibility(index)}
+              style={{ cursor: "pointer" }}
+              onKeyDown={onKeyDown}
+            >
+              {project.projet}
+            </h2>
+            {visibleProjects === index && (
+              <>
+                <img
+                  className="cardImage"
+                  src={project.img}
+                  alt="représentation du projet"
+                />
+                <figcaption className="cardDescription">
+                  {project.description}
+                </figcaption>
+                <button
+                  className="cardButton"
+                  type="button"
+                  onClick={() => handleClick(project.url)}
+                >
+                  Github link
+                </button>
+              </>
+            )}
+          </figure>
+        ))}
+      </div>
+      <Link to="/contact" className="projetButton">
+        Contact
+      </Link>
+    </>
   );
 }
 

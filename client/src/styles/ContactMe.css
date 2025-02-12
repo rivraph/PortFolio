@@ -1,5 +1,4 @@
 .contactcontener {
-  height: 59vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,13 +8,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 40%;
+  align-items: center;
+  width: 100%;
   gap: 1em;
+  margin-top: 9vh;
 }
 
 .divlibele {
   display: flex;
-
   gap: 0.5em;
   @media screen and (min-width: 979px) {
     gap: 1em;

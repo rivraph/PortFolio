@@ -1,3 +1,25 @@
 .principalwelcome {
-  height: 59vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 0;
+  margin: 2% 5% 0 5%;
+}
+
+.buttonWelcome {
+  background-color: var(--color3-);
+  color: white;
+  margin-left: 38vw;
+  width: 15%;
+  height: 8%;
+  border-radius: 1em;
+  box-shadow: 0 5px 5px var(--color7-);
+  cursor: pointer;
+  transition: background-color 300ms, color 300ms;
+  font-size: 180%;
+}
+
+.buttonWelcome:hover {
+  background-color: var(--color8-);
+  color: var(--color7-);
 }

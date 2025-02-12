@@ -8,65 +8,59 @@ function Contact() {
     <div className="contactcontener">
       <form className="formulaire">
         <div className="divlibele">
-          <label htmlFor="Nom">Nom</label>
+          <label htmlFor="Nom"> </label>
+          <input type="text" id="name" name="name" required placeholder="Nom" />
+        </div>
+        <div className="divlibele">
+          <label htmlFor="Prénom"> </label>
           <input
             type="text"
             id="name"
             name="name"
             required
-            placeholder="Entrez votre Prénom"
+            placeholder="Prénom"
           />
         </div>
         <div className="divlibele">
-          <label htmlFor="Prénom">Prénom</label>
+          <label htmlFor="Demandeur"> </label>
           <input
             type="text"
             id="name"
             name="name"
             required
-            placeholder="Entrez votre nom"
+            placeholder="Demandeur"
           />
         </div>
         <div className="divlibele">
-          <label htmlFor="Demandeur">Demandeur</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Entrez le nom de votre société"
-          />
-        </div>
-        <div className="divlibele">
-          <label htmlFor="Email">Email</label>
+          <label htmlFor="Email"> </label>
           <input
             type="email"
             id="email"
             name="email"
             required
-            placeholder="Entrez votre email"
+            placeholder="Email"
           />
         </div>
         <div className="divlibele">
-          <label htmlFor="tel">Téléphone</label>
+          <label htmlFor="tel"> </label>
           <input
             type="texte"
             id="telephone"
             name="telephone"
             required
-            placeholder="Entrez votre email"
+            placeholder="numéro de téléphone"
           />
         </div>
         <div className="divmessage">
-          <label htmlFor="Message"> Message </label>
+          <label htmlFor="Message"> </label>
           <textarea
             id="message"
             name="message"
             required
+            placeholder="Entrez votre message ici"
             maxLength={500}
             rows={10}
             cols={100}
-            placeholder="Entrez votre message ici"
           >
             {" "}
           </textarea>
@@ -76,7 +70,6 @@ function Contact() {
 
       <div className="contactfooter">
         <span className="spancontact">
-          <a href={dat.email}>Email 📨</a> |
           <a href={dat.github} target="_blank" rel="noreferrer">
             Github
           </a>{" "}

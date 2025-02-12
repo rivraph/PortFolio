@@ -1,9 +1,13 @@
+.discovermeconteneur {
+  position: relative;
+  top: 6vh;
+}
+
 .profilDm {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0;
+  padding: 0;
   border-radius: 70px;
   width: 100vw;
   max-height: 52vh;
@@ -88,4 +92,23 @@
     margin-left: 20%;
     margin-top: -2%;
   }
+}
+
+.discoverButton {
+  background-color: var(--color3-);
+  color: white;
+  border-radius: 2em;
+  box-shadow: 0 5px 5px var(--color7-);
+  cursor: pointer;
+  position: relative;
+  left: 12.9vw;
+  bottom: 6vh;
+  padding: 1%;
+  transition: background-color 300ms, color 300ms;
+  font-size: 180%;
+}
+
+.discoverButton:hover {
+  background-color: var(--color8-);
+  color: var(--color7-);
 }

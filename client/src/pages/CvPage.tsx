@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import datas from "../datas/datas.json";
 import "../styles/CvPage.css";
 import { useState } from "react";
@@ -89,6 +90,11 @@ function Cv() {
             <br />
           </div>
         )}
+      </div>
+      <div>
+        <Link to="/myprojects" className="cvButton">
+          Projets
+        </Link>
       </div>
     </div>
   );

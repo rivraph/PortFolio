@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import datas from "../datas/datas.json";
 import "../styles/Discoverme.css";
+import { Link } from "react-router-dom";
 
 type props = {
   text: string;
@@ -40,13 +41,18 @@ function Discoverme() {
     ); // Déclencher le paragraphe après le titre
   }, [age, firstName, lastName, personality, title]);
   return (
-    <>
+    <div className="discovermeconteneur">
       <div className="profilDm">
         <img src={img} width="10%" className="logoDm" alt="moi" />
         <h1 className="titleProfilDm">{typedTitle}</h1>
         <p className="personalityProfilDm">{typedDesc}</p>
       </div>
-    </>
+      <div>
+        <Link to="/cv" className="discoverButton">
+          Cursus
+        </Link>
+      </div>
+    </div>
   );
 }
 

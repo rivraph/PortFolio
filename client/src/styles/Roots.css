@@ -1,7 +1,5 @@
 #root {
-  margin: 0 auto;
   text-align: center;
-  justify-content: center;
   --color1-: #11151d;
   --color2-: #222d41;
   --color3-: #374158;
@@ -9,12 +7,12 @@
   --color5-: #d76c58;
   --color6-: hsla(214, 35%, 68%, 0.548);
   --color7-: #61dafbaa;
+  --color8-: lightgrey;
 }
 
 h1 {
   font-size: 3.5em;
   line-height: 1.1;
-  text-align: center;
   color: whitesmoke;
   text-shadow: 1px 5px 8px black;
 }
@@ -22,14 +20,10 @@ h1 {
 h2 {
   font-size: 50px;
   text-transform: uppercase;
-  margin: 0;
-  padding-top: 5%;
 }
 
 h3 {
   font-size: 40px;
-  text-align: center;
-  margin: 0;
   text-shadow: 0 0 25px black;
   color: var(--color7-);
   z-index: 5;
@@ -56,58 +50,4 @@ h2 {
   font-family: edu-au-vic-wa-nt-guides, Arial, Helvetica, sans-serif;
   text-decoration: inherit;
   text-shadow: 2px 2px 5px black;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.5em;
-  transform: translatey(0px);
-  animation: float 6s ease-in-out infinite;
-  height: 35vh;
-  margin-top: -8%;
-  @media screen and (min-width: 979px) {
-    display: flex;
-    height: 5vh;
-    justify-content: space-evenly;
-    flex-direction: row;
-    width: 100vw;
-    margin: 0 0 1% 0;
-  }
-}
-
-nav a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  z-index: 2;
-  font-size: 10vw;
-  text-shadow: 0 0 1em var(--color7-);
-  color: white;
-  font-size: 6vw;
-  @media screen and (min-width: 768px) and (max-width: 979px) {
-    font-size: 4vw;
-  }
-
-  @media screen and (min-width: 979px) {
-    font-size: 4vh;
-  }
-}
-
-nav a:hover {
-  scale: 1.2;
-  will-change: filter;
-  transition: filter 700ms;
-  text-shadow: 0 0 0.7em black;
-  color: var(--color7-);
-}
-
-ul {
-  display: flex;
-  width: 8vw;
-  text-align: center;
-  justify-content: space-around;
 }

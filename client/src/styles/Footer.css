@@ -1,6 +1,5 @@
 .footercontener {
   position: relative;
-  top: 50%;
   color: #61dafbaa;
   text-shadow: 0 0 15px black;
   display: flex;
@@ -9,7 +8,7 @@
   align-items: center;
   font-size: 15px;
   width: 100vw;
-
+  height: 10vh;
   @media screen and (min-width: 768px) and (max-width: 979px) {
     font-size: 20px;
     flex-wrap: wrap;

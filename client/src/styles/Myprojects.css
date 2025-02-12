@@ -3,7 +3,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2em;
-  max-height: 59vh;
+  max-height: 80vh;
   overflow-y: auto;
 }
 
@@ -68,4 +68,23 @@ figure.cardProject {
     width: 38%;
     font-size: 1.5em;
   }
+}
+
+.projetButton {
+  background-color: var(--color3-);
+  color: white;
+  padding: 0.6%;
+  position: relative;
+  left: 42vw;
+  bottom: 77vh;
+  border-radius: 1em;
+  box-shadow: 0 5px 5px var(--color7-);
+  cursor: pointer;
+  transition: background-color 300ms, color 300ms;
+  font-size: 180%;
+}
+
+.projetButton:hover {
+  background-color: var(--color8-);
+  color: var(--color7-);
 }
