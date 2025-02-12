@@ -1,18 +1,24 @@
 import express from "express";
 
 const router = express.Router();
-
+const app = express();
 /* ************************************************************************* */
 // Define Your API Routes Here
 /* ************************************************************************* */
 
 // Define item-related routes
-import itemActions from "./modules/item/itemActions";
+import userActions from "./modules/user/userActions";
 
-router.get("/api/items", itemActions.browse);
-router.get("/api/items/:id", itemActions.read);
-router.post("/api/items", itemActions.add);
+router.get("/api/user", userActions.browse);
+router.get("/api/user/:id", userActions.read);
+router.post("/api/user", userActions.add);
+/* router.delete("/api/user/:id", userActions.remove);
+router.put("/api/user/:id", userActions.update); */
 
 /* ************************************************************************* */
+
+import { sendEmail } from "./modules/MailController/mailController";
+
+router.post("/send-email", sendEmail);
 
 export default router;

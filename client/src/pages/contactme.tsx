@@ -1,22 +1,80 @@
 import "../styles/ContactMe.css";
+import { useState } from "react";
 import datas from "../datas/datas.json";
 
 function Contact() {
+  const [nom, setNom] = useState("");
+  const [prenom, setPrenom] = useState("");
+  const [demandeur, setDemandeur] = useState("");
+  const [email, setEmail] = useState("");
+  const [telephone, setTelephone] = useState("");
+  const [message, setMessage] = useState("");
   const dat = datas.personality;
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const formData = {
+      nom,
+      prenom,
+      demandeur,
+      email,
+      telephone,
+      message,
+    };
+
+    try {
+      const response = await fetch("http://localhost:3310/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const result = await response.text();
+        alert("Message envoyé avec succès !");
+        console.info(result);
+        // Tu peux réinitialiser le formulaire ici si nécessaire
+        setNom("");
+        setPrenom("");
+        setDemandeur("");
+        setEmail("");
+        setTelephone("");
+        setMessage("");
+      } else {
+        alert("Erreur lors de l'envoi du message. Essayez encore.");
+      }
+    } catch (error) {
+      console.error("Erreur:", error);
+      alert("Une erreur est survenue. Veuilllez réessayez ultérieurement");
+    }
+  };
 
   return (
     <div className="contactcontener">
-      <form className="formulaire">
+      <form className="formulaire" onSubmit={handleSubmit}>
         <div className="divlibele">
           <label htmlFor="Nom"> </label>
-          <input type="text" id="name" name="name" required placeholder="Nom" />
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            value={nom}
+            onChange={(e) => setNom(e.target.value)}
+            required
+            placeholder="Nom"
+          />
         </div>
         <div className="divlibele">
           <label htmlFor="Prénom"> </label>
           <input
             type="text"
-            id="name"
-            name="name"
+            id="prenom"
+            name="prenom"
+            value={prenom}
+            onChange={(e) => setPrenom(e.target.value)}
             required
             placeholder="Prénom"
           />
@@ -25,8 +83,10 @@ function Contact() {
           <label htmlFor="Demandeur"> </label>
           <input
             type="text"
-            id="name"
-            name="name"
+            id="demandeur"
+            name="demandeur"
+            value={demandeur}
+            onChange={(e) => setDemandeur(e.target.value)}
             required
             placeholder="Demandeur"
           />
@@ -37,6 +97,8 @@ function Contact() {
             type="email"
             id="email"
             name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
             placeholder="Email"
           />
@@ -47,6 +109,8 @@ function Contact() {
             type="texte"
             id="telephone"
             name="telephone"
+            value={telephone}
+            onChange={(e) => setTelephone(e.target.value)}
             required
             placeholder="numéro de téléphone"
           />
@@ -56,6 +120,8 @@ function Contact() {
           <textarea
             id="message"
             name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             required
             placeholder="Entrez votre message ici"
             maxLength={500}
