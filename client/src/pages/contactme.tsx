@@ -1,10 +1,14 @@
+import "../styles/ContactMe.css";
+import datas from "../datas/datas.json";
+
 function Contact() {
+  const dat = datas.personality;
+
   return (
-    <>
-      <h2> ( Page en construction )</h2>
-      <form>
+    <div className="contactcontener">
+      <form className="formulaire">
         <div className="divlibele">
-          <label htmlFor="Prénom">Prénom</label>
+          <label htmlFor="Nom">Nom</label>
           <input
             type="text"
             id="name"
@@ -14,7 +18,7 @@ function Contact() {
           />
         </div>
         <div className="divlibele">
-          <label htmlFor="Nom">Nom</label>
+          <label htmlFor="Prénom">Prénom</label>
           <input
             type="text"
             id="name"
@@ -43,6 +47,16 @@ function Contact() {
             placeholder="Entrez votre email"
           />
         </div>
+        <div className="divlibele">
+          <label htmlFor="tel">Téléphone</label>
+          <input
+            type="texte"
+            id="telephone"
+            name="telephone"
+            required
+            placeholder="Entrez votre email"
+          />
+        </div>
         <div className="divmessage">
           <label htmlFor="Message"> Message </label>
           <textarea
@@ -50,6 +64,8 @@ function Contact() {
             name="message"
             required
             maxLength={500}
+            rows={10}
+            cols={100}
             placeholder="Entrez votre message ici"
           >
             {" "}
@@ -57,7 +73,25 @@ function Contact() {
         </div>
         <input className="cardButton" type="submit" />
       </form>
-    </>
+
+      <div className="contactfooter">
+        <span className="spancontact">
+          <a href={dat.email}>Email 📨</a> |
+          <a href={dat.github} target="_blank" rel="noreferrer">
+            Github
+          </a>{" "}
+          |
+          <a href={dat.linkedin} target="_blank" rel="noreferrer">
+            linkedin
+          </a>{" "}
+          |
+          <a href={dat.facebook} target="_blank" rel="noreferrer">
+            facebook
+          </a>{" "}
+          |
+        </span>
+      </div>
+    </div>
   );
 }
 

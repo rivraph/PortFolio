@@ -1,13 +1,12 @@
 // Import necessary modules from React and React Router
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import "./index.css";
-import "./Home.css";
-import Header from "./components/Header.tsx";
-import Cv from "./pages/CvPage.tsx";
-import Contact from "./pages/contactme.tsx";
-import Discoverme from "./pages/discoverme.tsx";
-import Projects from "./pages/myprojects.tsx";
+import Cv from "../pages/CvPage.tsx";
+import Welcome from "../pages/Welcome.tsx";
+import Contact from "../pages/contactme.tsx";
+import Discoverme from "../pages/discoverme.tsx";
+import Projects from "../pages/myprojects.tsx";
+import Header from "./Header.tsx";
 
 const router = createBrowserRouter([
   {
@@ -15,11 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Discoverme />,
-      },
-      {
-        path: "/Discoverme",
-        element: <Discoverme />,
+        element: <Welcome />,
       },
       {
         path: "/discover",
@@ -39,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "*",
-        element: <Discoverme />,
+        element: <Welcome />,
       },
     ],
   },

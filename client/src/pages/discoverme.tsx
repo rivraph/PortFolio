@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import datas from "../datas/datas.json";
+import "../styles/Discoverme.css";
 
 type props = {
   text: string;
@@ -40,10 +41,10 @@ function Discoverme() {
   }, [age, firstName, lastName, personality, title]);
   return (
     <>
-      <div className="profil">
-        <img src={img} width="35%" className="logo" alt="moi" />
-        <h1 className="titleProfil">{typedTitle}</h1>
-        <p className="personalityProfil">{typedDesc}</p>
+      <div className="profilDm">
+        <img src={img} width="10%" className="logoDm" alt="moi" />
+        <h1 className="titleProfilDm">{typedTitle}</h1>
+        <p className="personalityProfilDm">{typedDesc}</p>
       </div>
     </>
   );

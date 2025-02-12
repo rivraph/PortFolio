@@ -1,0 +1,71 @@
+.projectprincipal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  max-height: 59vh;
+  overflow-y: auto;
+}
+
+figure.cardProject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  margin-bottom: 10%;
+  border-radius: 5em;
+  box-shadow: 1px 1px 15px white;
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    width: 45%;
+  }
+  @media screen and (min-width: 979px) {
+    width: 30vw;
+    padding: 2%;
+    margin: 1%;
+  }
+}
+
+.cardImage {
+  box-shadow: 10px 10px 40px 5px white;
+  border-radius: 20px;
+  padding: 3px;
+  width: 70vw;
+  @media screen and (min-width: 979px) {
+    width: 90%;
+    padding: 2%;
+  }
+}
+
+.cardDescription {
+  width: 80%;
+  margin: 5%;
+  padding: 5px;
+  background-color: #61dafbaa;
+  border-radius: 10px;
+  border-style: groove solid;
+  text-align: center;
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 979px) {
+    width: 90%;
+    font-size: 1.5em;
+  }
+}
+
+.cardButton {
+  background-color: #213547;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 979px) {
+    width: 38%;
+    font-size: 1.5em;
+  }
+}

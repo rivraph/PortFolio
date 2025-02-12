@@ -1,0 +1,91 @@
+.profilDm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border-radius: 70px;
+  width: 100vw;
+  max-height: 52vh;
+  @media screen and (min-width: 979px) {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+  }
+}
+
+.logoDm {
+  height: auto;
+  border-radius: 5%;
+  will-change: filter;
+  transition: filter 300ms;
+  width: 10vw;
+  height: auto;
+  margin: 5%;
+  will-change: filter;
+  transition: filter 1000ms;
+  z-index: 0;
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    width: 35%;
+  }
+  @media screen and (min-width: 979px) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-left: 50%;
+    width: 67%;
+  }
+}
+
+.logoDm:hover {
+  filter: drop-shadow(0 0 2em white);
+}
+
+.titleProfilDm {
+  margin-bottom: 0;
+  font-size: 25px;
+  text-shadow: 1px 1px 8px var(--color7-);
+  width: 75vw;
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    font-size: 35px;
+  }
+  @media screen and (min-width: 979px) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 40%;
+    margin-left: 21.5%;
+    font-size: 2.5em;
+  }
+}
+
+.personalityProfilDm {
+  font-size: 24px;
+  font-family: edu-au-vic-wa-nt-guides, Arial, Helvetica, sans-serif;
+  background-color: var(--color6-);
+  border-radius: 25px;
+  border-style: groove solid;
+  text-align: left;
+  padding: 10px 10px 10px 25px;
+  width: 70vw;
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    font-size: 20px;
+    width: 55vw;
+  }
+  @media screen and (min-width: 979px) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 40%;
+    margin-left: 20%;
+    margin-top: -2%;
+  }
+}

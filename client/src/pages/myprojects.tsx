@@ -1,5 +1,6 @@
 import { useState } from "react";
 import datas from "../datas/datas.json";
+import "../styles/Myprojects.css";
 
 const data = datas.projets;
 
@@ -57,9 +58,9 @@ function Projects() {
   return (
     <div className="projectprincipal">
       {projects.map((project, index) => (
-        <figure className="card" key={1}>
+        <figure className="cardProject" key={1}>
           <h2
-            className="titleCard"
+            className="titleCardProject"
             onClick={() => toggleVisibility(index)}
             style={{ cursor: "pointer" }}
             onKeyDown={onKeyDown}

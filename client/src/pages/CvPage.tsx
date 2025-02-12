@@ -1,5 +1,5 @@
 import datas from "../datas/datas.json";
-import "../Home.css";
+import "../styles/CvPage.css";
 import { useState } from "react";
 
 function Cv() {
@@ -18,10 +18,10 @@ function Cv() {
 
   return (
     <div className="principalCv">
-      <div className="infos">
+      <div className="infosCv">
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <h2
-          className="titleCard"
+          className="titleCardCv"
           style={{ cursor: "pointer" }}
           onClick={() => toggleSection("formation")}
         >
@@ -40,10 +40,10 @@ function Cv() {
           </div>
         )}
       </div>
-      <div className="infos">
+      <div className="infosCv">
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <h2
-          className="titleCard"
+          className="titleCardCv"
           onClick={() => toggleSection("experiences")}
           style={{ cursor: "pointer" }}
         >
@@ -68,10 +68,10 @@ function Cv() {
           </div>
         )}
       </div>
-      <div className="infos">
+      <div className="infosCv">
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <h2
-          className="titleCard"
+          className="titleCardCv"
           onClick={() => toggleSection("competences")}
           style={{ cursor: "pointer" }}
         >

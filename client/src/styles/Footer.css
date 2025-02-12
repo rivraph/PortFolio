@@ -1,0 +1,48 @@
+.footercontener {
+  position: relative;
+  top: 50%;
+  color: #61dafbaa;
+  text-shadow: 0 0 15px black;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 15px;
+  width: 100vw;
+
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    font-size: 20px;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 979px) {
+    font-size: 25px;
+  }
+}
+
+#therrelylife:hover {
+  cursor: pointer;
+}
+
+.reactlogo {
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.reactlogo:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes reactlogo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reactlogo {
+    animation: reactlogo-spin infinite 20s linear;
+  }
+}
