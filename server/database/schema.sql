@@ -69,7 +69,7 @@ VALUES
   "https://www.linkedin.com/in/rivière-raphaël-130b78151/",
   "https://www.facebook.com/raphael.riviere.58",
   "https://www.instagram.com/therrelylifephotography/",
-  "photographie, sports, simracing, moto, informatique ...",
+  "photographie, videos, sports, simracing, moto, informatique, découvrir le monde, la nature ...",
   "/IMG_3880.webp");
 
 INSERT INTO certificat (id, user_id, diplome, annee_obtention, description, localisation)
