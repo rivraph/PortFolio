@@ -1,26 +1,22 @@
-import { useEffect, useState } from "react";
-import datas from "../datas/datas.json";
 import "../styles/Discoverme.css";
 import { Link } from "react-router-dom";
+import { useContextProvider } from "../context/userContext";
 
-type props = {
+/* type props = {
   text: string;
   setText: React.Dispatch<React.SetStateAction<string>>;
   delay: number;
-};
+}; */
 function Discoverme() {
-  // Extraction des données JSON
-  const { img, firstName, lastName, age, title, personality } =
-    datas.personality;
+  const { userData, autreData } = useContextProvider();
+  /* const [typedTitle, setTypedTitle] = useState("");
+  const [typedDesc, setTypedDesc] = useState(""); */
+  const titre = `${userData?.prenom} ${userData?.nom} Développeur Web FullStack`;
+  const desc = autreData[4]?.description;
+  localStorage.removeItem("isAdmin");
 
-  const [typedTitle, setTypedTitle] = useState("");
-  const [typedDesc, setTypedDesc] = useState("");
-
-  useEffect(() => {
-    const titre = `R${firstName} ${lastName} ${age} ${title || ""}`;
-    const desc = `S${personality || ""}`;
-
-    // Fonction pour l'effet de machine à écrire
+  /* useEffect(() => {
+     // Fonction pour l'effet de machine à écrire
     const typeEffect = ({ text, setText, delay }: props) => {
       let index = 0;
       const interval = setInterval(() => {
@@ -38,14 +34,15 @@ function Discoverme() {
     setTimeout(
       () => typeEffect({ text: desc, setText: setTypedDesc, delay: 50 }),
       titre.length * 100,
-    ); // Déclencher le paragraphe après le titre
-  }, [age, firstName, lastName, personality, title]);
+    ); // Déclencher le paragraphe après le titre 
+  }, [userData]);*/
+
   return (
     <div className="discovermeconteneur">
       <div className="profilDm">
-        <img src={img} width="10%" className="logoDm" alt="moi" />
-        <h1 className="titleProfilDm">{typedTitle}</h1>
-        <p className="personalityProfilDm">{typedDesc}</p>
+        <img src={userData?.img} width="10%" className="logoDm" alt="moi" />
+        <h1 className="titleProfilDm">{titre}</h1>
+        <p className="personalityProfilDm">{desc}</p>
       </div>
       <div>
         <Link to="/cv" className="discoverButton">

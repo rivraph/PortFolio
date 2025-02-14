@@ -1,4 +1,4 @@
-#root {
+* {
   text-align: center;
   --color1-: #11151d;
   --color2-: #222d41;
@@ -8,6 +8,9 @@
   --color6-: hsla(214, 35%, 68%, 0.548);
   --color7-: #61dafbaa;
   --color8-: lightgrey;
+  font-family: "Miniver", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1 {
@@ -19,11 +22,10 @@ h1 {
 
 h2 {
   font-size: 50px;
-  text-transform: uppercase;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 30px;
   text-shadow: 0 0 25px black;
   color: var(--color7-);
   z-index: 5;

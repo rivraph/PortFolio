@@ -2,27 +2,14 @@ import databaseClient from "../../../database/client";
 
 import type { Result, Rows } from "../../../database/client";
 
-type UserProps = {
+type autreProps = {
   id: number;
-  prenom: string;
-  nom: string;
-  adresse: string;
-  permis: string;
-  ville: string;
-  telephone: string;
-  email: string;
-  password: string;
-  date_de_naissance: string;
-  nationalite: string;
-  github: string;
-  linkedin: string;
-  facebook: string;
-  instagram: string;
-  hobbies: string;
-  img: string;
+  user_id: number;
+  intitule: string;
+  description: string;
 };
 
-class UserRepository {
+class autreRepository {
   // The C of CRUD - Create operation
 
   /* async create(item: Omit<UserProps, "id">) {
@@ -46,15 +33,15 @@ class UserRepository {
     );
 
     // Return the first row of the result, which represents the item
-    return rows[0] as UserProps;
+    return rows[0] as autreProps;
   }
 
   async readAll() {
     // Execute the SQL SELECT query to retrieve all items from the "item" table
-    const [rows] = await databaseClient.query<Rows>("select * from user");
+    const [rows] = await databaseClient.query<Rows>("select * from autres ");
 
     // Return the array of items
-    return rows as UserProps[];
+    return rows as autreProps[];
   }
 
   // The U of CRUD - Update operation
@@ -72,4 +59,4 @@ class UserRepository {
   // }
 }
 
-export default new UserRepository();
+export default new autreRepository();

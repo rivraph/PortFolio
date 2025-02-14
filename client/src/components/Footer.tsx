@@ -1,14 +1,18 @@
 import reactLogo from "/react.svg";
 import "../styles/Footer.css";
+import { useContextProvider } from "../context/userContext";
+
 function Footer() {
+  const { handleAdminConnect } = useContextProvider();
+
   return (
     <>
       <div className="footercontener">
         <a
-          href="https://react.dev"
-          target="_blank"
+          href="/admin/formations"
           className="reactlogo"
           rel="noreferrer"
+          onClick={handleAdminConnect}
         >
           <img src={reactLogo} alt="React logo" />
         </a>

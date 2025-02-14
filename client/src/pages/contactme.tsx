@@ -10,7 +10,7 @@ function Contact() {
   const [telephone, setTelephone] = useState("");
   const [message, setMessage] = useState("");
   const dat = datas.personality;
-
+  localStorage.removeItem("isAdmin");
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 

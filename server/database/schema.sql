@@ -84,15 +84,25 @@ INSERT INTO experiences (id, user_id, entreprise, lieu, date_debut, date_fin, po
 VALUES
   (1, 1, "SOGELEC INFORMATIQUE", "Saint Pierre (97410)", "2006-09-01", "2007-06-30", "Conseiller en informatique", "Vente, gestion des stocks, facturation, réparation, montage ..."),
   (2, 1, "HyperCrack", "Saint Pierre (97410)", "2007-09-01", "2008-06-30", "Conseiller rayon multimédia", "gestion du rayon, merchandising, conseiller clientèle ..."),
-  (3, 1, "Feu Vert", "Tours (37000)", "2009-12-14", "2009-12-24", "Mécanicien multimarques", "Mécanicien, monteur de pneus, accessoiriste ...");
+  (3, 1, "Feu Vert", "Tours (37000)", "2009-12-14", "2009-12-24", "Mécanicien multimarques", "Mécanicien, monteur de pneus, accessoiriste ..."),
+  (4, 1, "Sud Loire Automobiles", "Saint Cyr sur Loire (37540)", "2010-03-08", "2010-03-26", "Mécanicien multimarque", "Mécanique générale sur Kia, Mitsubishi, Subaru et multimarque (Par VO), accessoiristes ..."),
+  (5, 1, "Sud Loire Automobiles", "Saint Cyr sur Loire (37540)", "2010-06-28", "2012-01-27", "Mécanicien multimarque", "Mécanique générale sur Kia, Mitsubishi, Subaru et multimarque (gestion parc VO), accessoiristes, mécanique générale, préparateur VO ..."),
+  (6, 1, "Delko", "Vestric et Candiac (30600)", "2012-03-05", "2012-09-28", "Mécanicien multimarques", "mécanique générale, monteur de pneus, accessoiriste ..."),
+  (7, 1, "Kia Sodak", "Castelnau-le-Lez (34170)", "2012-10-01", "2016-03-26", "Mécanicien KIA", "Mécanique générale sur Kia et multimarque (gestion parc VO), techncien de diagnostic, accessoiristes ..."),
+  (8, 1, "Mecaperfs", "Baillargues (34660)", "2016-08-01", "2017-12-14", "Gérant EURL", "Gérant d'entreprise, gestion financière et administrative, mécanicien multimarque auto et moto, diagnosticien, préparateur motoriste, pose accessoires, carrossier, réparation et vente de véhicules d'occasion ..."),
+  (9, 1, "Kia Sodak", "Montpellier (34000)", "2018-01-02", "2021-06-30", "Chef d'atelier", "Chef d'atelier, réceptionnaire, magasinier, gestion des garanties, mécanicien et technicien, préparateur VO ..."),
+  (10, 1, "Biomotors", "Vendargues (34740)", "2021-07-01", "2024-05-10", "Conseiller technique", "Conseiller technique, gestionnaire des expertises terrain et administratif, pose et gestion des kits, mécanique légère, dépannage sur site, test injecteurs essence ...");
 
 INSERT INTO autres (id, user_id, intitule, description)
 VALUES
   (1, 1, "Français", "Langue courante"),
-  (2, 1, "Automobile", "Divers valises de diagnostic multimarques, reprogrammation moteur, logiciels constructeur ..."),
-  (3, 1, "Informatique", "Suite Office, Photoshop, Lightroom, DaVinci Resolve, Trello, Slack ..."),
-  (4, 1, "Dev Web", "VsCode, GitHub, Figma, Wireframe.cc, Terminal ...");
-
+  (2, 1, "Anglais", "Niveau élementaire"),
+  (3, 1, "Automobile", "Divers valises de diagnostic multimarques, reprogrammation moteur, logiciels constructeur ..."),
+  (4, 1, "Informatique", "Suite Office, Photoshop, Lightroom, DaVinci Resolve, Trello, Slack ..."),
+  (5, 1, "Dev Web", "VsCode, GitHub, Figma, Wireframe.cc, Terminal ..."),
+  (6, 1, "qualités", "Sérieux, pragmatique, en recheche d'apprentissage et d'évolution, je suis disponible en tant que développeur Web Fullstack !"),
+  (7, 1, "Stacks", "HTML, CSS, JavaScript, REACT, GIT, GITHUB, TypeScript, NodeJS, Api Rest, Agile, Merise, ExpressJS, MySQL, NoSQL, BDD, routing, authentification ...");
+  
 INSERT INTO projets (id, user_id, nom, img, info, url)
 VALUES
   (1, 1, "Solo Rush", "/solo_rush_preview.png", "Projet challenge 1 journée réalisé en solo en HTML et CSS après 7 jours d'apprentissage au sein de la WCS (Wild Code School). Projet réalisé en 5H", "https://github.com/rivraph/SoloRush1-WCS"),

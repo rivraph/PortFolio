@@ -1,12 +1,17 @@
 // Import necessary modules from React and React Router
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Autres from "../AdminPages/Autres.tsx";
+import Experiences from "../AdminPages/Experiences.tsx";
+import Formations from "../AdminPages/Formations.tsx";
+import Projets from "../AdminPages/Projets.tsx";
 import Cv from "../pages/CvPage.tsx";
 import Welcome from "../pages/Welcome.tsx";
 import Contact from "../pages/contactme.tsx";
 import Discoverme from "../pages/discoverme.tsx";
 import Projects from "../pages/myprojects.tsx";
 import Header from "./Header.tsx";
+import Admin from "./admin.tsx";
 
 const router = createBrowserRouter([
   {
@@ -17,24 +22,42 @@ const router = createBrowserRouter([
         element: <Welcome />,
       },
       {
-        path: "/discover",
+        path: "discover",
         element: <Discoverme />,
       },
       {
-        path: "/cv",
+        path: "cv",
         element: <Cv />,
       },
       {
-        path: "/myprojects",
+        path: "myprojects",
         element: <Projects />,
       },
       {
-        path: "/contact",
+        path: "contact",
         element: <Contact />,
       },
       {
-        path: "*",
-        element: <Welcome />,
+        path: "admin",
+        element: <Admin />,
+        children: [
+          {
+            path: "formations",
+            element: <Formations />,
+          },
+          {
+            path: "experiences",
+            element: <Experiences />,
+          },
+          {
+            path: "autres",
+            element: <Autres />,
+          },
+          {
+            path: "projets",
+            element: <Projets />,
+          },
+        ],
       },
     ],
   },

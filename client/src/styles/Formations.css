@@ -1,0 +1,22 @@
+.formationscontener {
+  height: 59vh;
+}
+
+form {
+  margin-top: 5%;
+}
+#description {
+  width: 50vw;
+  font-size: auto;
+  text-align: left;
+}
+
+#displayOffLabel {
+  display: none;
+}
+
+#buttonAdd {
+  margin: 6vh;
+  width: 10vw;
+  height: 5vh;
+}

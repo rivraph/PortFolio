@@ -2,27 +2,16 @@ import databaseClient from "../../../database/client";
 
 import type { Result, Rows } from "../../../database/client";
 
-type UserProps = {
+type projectsProps = {
   id: number;
-  prenom: string;
+  user_id: number;
   nom: string;
-  adresse: string;
-  permis: string;
-  ville: string;
-  telephone: string;
-  email: string;
-  password: string;
-  date_de_naissance: string;
-  nationalite: string;
-  github: string;
-  linkedin: string;
-  facebook: string;
-  instagram: string;
-  hobbies: string;
   img: string;
+  info: string;
+  url: string;
 };
 
-class UserRepository {
+class projetsRepository {
   // The C of CRUD - Create operation
 
   /* async create(item: Omit<UserProps, "id">) {
@@ -41,20 +30,20 @@ class UserRepository {
   async read(id: number) {
     // Execute the SQL SELECT query to retrieve a specific item by its ID
     const [rows] = await databaseClient.query<Rows>(
-      "select * from item where id = ?",
+      "select * from projets where id = ?",
       [id],
     );
 
     // Return the first row of the result, which represents the item
-    return rows[0] as UserProps;
+    return rows[0] as projectsProps;
   }
 
   async readAll() {
     // Execute the SQL SELECT query to retrieve all items from the "item" table
-    const [rows] = await databaseClient.query<Rows>("select * from user");
+    const [rows] = await databaseClient.query<Rows>("select * from projets ");
 
     // Return the array of items
-    return rows as UserProps[];
+    return rows as projectsProps[];
   }
 
   // The U of CRUD - Update operation
@@ -72,4 +61,4 @@ class UserRepository {
   // }
 }
 
-export default new UserRepository();
+export default new projetsRepository();

@@ -1,31 +1,68 @@
 import "../styles/Header.css";
 import { Link, Outlet } from "react-router-dom";
-import { ContextProvider } from "../context/userContext";
 import Footer from "./Footer";
 import "../styles/index.css";
 import "../styles/Roots.css";
+import { ContextProvider } from "../context/userContext";
 
 function Header() {
+  // mettre en place une fonction permettant, lors de la navigation, remove setItem admin
+  const handleAdminDisconnect = () => {
+    localStorage.removeItem("isAdmin");
+  };
+
+  // fonction onKeydown
+  const handleKeyAdminDisconnect = (event: React.KeyboardEvent) => {
+    if (event.key === "Enter") {
+      handleAdminDisconnect();
+    }
+  };
+
   return (
     <>
       <ContextProvider>
         <div className="principalcontener">
           <div className="header">
             <nav>
-              <Link to="home">
-                <b>Bienvenue</b>
+              <Link to="/">
+                <b
+                  onClick={handleAdminDisconnect}
+                  onKeyDown={handleKeyAdminDisconnect}
+                >
+                  Bienvenue
+                </b>
               </Link>
               <Link to="discover">
-                <b>Qui suis je ?</b>
+                <b
+                  onClick={handleAdminDisconnect}
+                  onKeyDown={handleKeyAdminDisconnect}
+                >
+                  Qui suis je ?
+                </b>
               </Link>
               <Link to="cv">
-                <b>Mon Cursus</b>
+                <b
+                  onClick={handleAdminDisconnect}
+                  onKeyDown={handleKeyAdminDisconnect}
+                >
+                  Mon Cursus
+                </b>
               </Link>
               <Link to="myprojects">
-                <b>Mes Projets</b>
+                <b
+                  onClick={handleAdminDisconnect}
+                  onKeyDown={handleKeyAdminDisconnect}
+                >
+                  Mes Projets
+                </b>
               </Link>
               <Link to="contact">
-                <b>Contact</b>
+                <b
+                  onClick={handleAdminDisconnect}
+                  onKeyDown={handleKeyAdminDisconnect}
+                >
+                  Contact
+                </b>
               </Link>
             </nav>
           </div>

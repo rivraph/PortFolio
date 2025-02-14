@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
-import datas from "../datas/datas.json";
 import "../styles/CvPage.css";
 import { useState } from "react";
+import { useContextProvider } from "../context/userContext";
 
 function Cv() {
-  const exp = datas.experience;
-  const Edu = datas.education;
-  const Oth = datas.others;
-
+  localStorage.removeItem("isAdmin");
   const [visibleSection, setVisibleSection] = useState<string | null>(null);
+  const { autreData, expData, certData } = useContextProvider();
+  console.info("autreData page cv =>", autreData);
+  console.info("expData page cv =>", expData);
+  console.info("certData page cv =>", certData);
 
   const toggleSection = (section: string) => {
     // Basculer la visibilité de la section
@@ -17,77 +18,87 @@ function Cv() {
     );
   };
 
+  const onkeyDown = () => {
+    toggleSection("formation");
+  };
+
   return (
     <div className="principalCv">
       <div className="infosCv">
-        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <h2
           className="titleCardCv"
           style={{ cursor: "pointer" }}
           onClick={() => toggleSection("formation")}
+          onKeyDown={onkeyDown}
         >
-          Formations
+          Diplomes
         </h2>
+
         {visibleSection === "formation" && (
           <div className="cv-contener">
-            <span>{Edu.wild}</span>
-            <br />
-            <span>{Edu.remap}</span>
-            <br />
-            <span>{Edu.tdra}</span>
-            <br />
-            <span>{Edu.bacc}</span>
-            <br />
+            {certData
+              .sort((a, b) => b.id - a.id)
+              .map((c) => (
+                <div className="spandiv" key={c.id}>
+                  <span>
+                    Diplome {c.diplome} de {c.description} obtenu en{" "}
+                    {c.annee_obtention} ({c.localisation})
+                  </span>
+                  <br />
+                  <br />
+                </div>
+              ))}
           </div>
         )}
       </div>
       <div className="infosCv">
-        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <h2
           className="titleCardCv"
           onClick={() => toggleSection("experiences")}
           style={{ cursor: "pointer" }}
+          onKeyDown={onkeyDown}
         >
-          Expériences Pro
+          Expériences
         </h2>
         {visibleSection === "experiences" && (
           <div className="cv-contener">
-            <span>{exp.bleulib}</span>
-            <br />
-            <span>{exp.biomotors}</span>
-            <br />
-            <span>{exp.kia1}</span>
-            <br />
-            <span>{exp.mecaperfs}</span>
-            <br />
-            <span>{exp.kia2}</span>
-            <br />
-            <span>{exp.delko}</span>
-            <br />
-            <span>{exp.kia}</span>
-            <br />
+            {expData
+              .sort((a, b) => b.id - a.id)
+              .map((e) => (
+                <div className="spandiv" key={e.id}>
+                  <span key={e.id}>
+                    {e.poste} chez {e.entreprise} situé à {e.lieu} de{" "}
+                    {e.date_debut} à {e.date_fin}
+                  </span>
+                  <br />
+                  <span>Principales fonctions : {e.description}</span>
+                  <br />
+                  <br />
+                </div>
+              ))}
           </div>
         )}
       </div>
       <div className="infosCv">
-        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <h2
           className="titleCardCv"
           onClick={() => toggleSection("competences")}
           style={{ cursor: "pointer" }}
+          onKeyDown={onkeyDown}
         >
-          Autres compétences
+          Compétences
         </h2>
         {visibleSection === "competences" && (
           <div className="cv-contener">
-            <span>{Oth.logiciels}</span>
-            <br />
-            <span>{Oth.francais}</span>
-            <br />
-            <span>{Oth.anglais}</span>
-            <br />
-            <span>{Oth.espagnol}</span>
-            <br />
+            {autreData.map((o) => (
+              <div className="spandiv" key={o.id}>
+                <span>
+                  {o.intitule} : {o.description}
+                </span>
+                <br />
+                <br />
+              </div>
+            ))}
           </div>
         )}
       </div>

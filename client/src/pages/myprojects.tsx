@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const data = datas.projets;
 
 function Projects() {
+  localStorage.removeItem("isAdmin");
   const projects = [
     {
       projet: data.projet1,

@@ -1,16 +1,30 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import type { Dispatch, SetStateAction } from "react";
+import { useNavigate } from "react-router-dom";
 
-const UserContext = createContext<ContextArcadiaType | undefined>(undefined);
+const UserContext = createContext<UserContextType | undefined>(undefined);
 
-type ContextArcadiaType = {
-  //exemples pour le typage
-  /* debPoints: number;
-  setDebPoints: Dispatch<SetStateAction<number>>; */
+type UserContextType = {
   userData: UserData | null;
-  setUserData: (data: UserData) => void;
+  setUserData: Dispatch<SetStateAction<UserData | null>>;
+  autreData: AutreData[];
+  setAutreData: Dispatch<SetStateAction<AutreData[]>>;
+  handleAdminConnect: () => void;
+  certData: CertData[];
+  setCertData: Dispatch<SetStateAction<CertData[]>>;
+  expData: expProps[];
+  setExpData: Dispatch<SetStateAction<expProps[]>>;
+  projData: projectsProps[];
+  setProjData: Dispatch<SetStateAction<projectsProps[]>>;
 };
 
-//tous les typages de la BDD
+type AutreData = {
+  id: number;
+  user_id: number;
+  intitule: string;
+  description: string;
+};
+
 type UserData = {
   id: number;
   prenom: string;
@@ -31,50 +45,53 @@ type UserData = {
   img: string;
 };
 
-/* type certificatData = {
-    id: number,
-    user_id: number,
-    diplome: string,
-    annee_obtention: string,
-    description: string,
-    localisation: string,
-}
+type ContextProviderProps = {
+  children: React.ReactNode;
+};
 
-type experiencesData = {
-    id: number,
-    user_id: number,
-    entreprise: string,
-    lieu: string,
-    date_debut: string,
-    date_fin: string,
-    poste: string,
-    description: string,
-}
+type CertData = {
+  id: number;
+  user_id: number;
+  diplome: string;
+  annee_obtention: string;
+  description: string;
+  localisation: string;
+};
 
-type autresData = {
-    id: number,
-    user_id: number,
-    intitule: string,
-    description: string,
-}
+type expProps = {
+  id: number;
+  user_id: number;
+  entreprise: string;
+  lieu: string;
+  date_debut: string;
+  date_fin: string;
+  poste: string;
+  description: string;
+};
 
-type projetsData = {
-    id: number,
-    user_id: number,
-    nom: string,
-    img: string,
-    info: string,
-    url: string,
-} */
-function ContextProvider({ children }: { children: React.ReactNode }) {
+type projectsProps = {
+  id: number;
+  user_id: number;
+  nom: string;
+  img: string;
+  info: string;
+  url: string;
+};
+function ContextProvider({ children }: ContextProviderProps): JSX.Element {
   //fonctions et variables à insérer
   const [userData, setUserData] = useState<UserData | null>(null);
+  const [autreData, setAutreData] = useState<AutreData[]>([]);
+  const [certData, setCertData] = useState<CertData[]>([]);
+  const [expData, setExpData] = useState<expProps[]>([]);
+  const [projData, setProjData] = useState<projectsProps[]>([]);
+  const navigate = useNavigate();
 
+  //fetch toutes les données USER au chargement de la homepage.
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/userdata`,
+          `${import.meta.env.VITE_API_URL}/api/user`,
           {
             method: "GET",
             headers: { "Content-Type": "application/json" },
@@ -83,25 +100,146 @@ function ContextProvider({ children }: { children: React.ReactNode }) {
 
         if (response.ok) {
           const [respUserData] = await response.json();
-          console.info(
-            "Données reçues du backend après fetch userData =>",
-            respUserData,
-          );
           setUserData(respUserData);
-          console.info("donnée stocké dans state userData", userData);
         }
       } catch (err) {
         console.error("Erreur lors de la connexion :", err);
       }
     };
     fetchData();
-  }, [userData]);
+  }, []);
+
+  //fetch toutes les données AUTRE au chargement de la homepage.
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/autres`,
+          {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+          },
+        );
+
+        if (response.ok) {
+          const respAutreData = await response.json();
+
+          setAutreData(respAutreData);
+        }
+      } catch (err) {
+        console.error("Erreur lors de la connexion :", err);
+      }
+    };
+    fetchData();
+  }, []);
+
+  //fetch toutes les données CERTIFICAT au chargement de la homepage.
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/cert`,
+          {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+          },
+        );
+
+        if (response.ok) {
+          const certData = await response.json();
+          console.info("données fetchées certData =>", certData);
+          setCertData(certData);
+          console.info("données fetchées certData =>", certData);
+        }
+      } catch (err) {
+        console.error("Erreur lors de la connexion :", err);
+      }
+    };
+    fetchData();
+  }, []);
+
+  //fetch toutes les données EXPERIENCES au chargement de la homepage.
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/exp`,
+          {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+          },
+        );
+
+        if (response.ok) {
+          const expData = await response.json();
+
+          console.info("données fetchées expData =>", expData);
+          setExpData(expData);
+          console.info("données fetchées expData =>", expData);
+        }
+      } catch (err) {
+        console.error("Erreur lors de la connexion :", err);
+      }
+    };
+    fetchData();
+  }, []);
+
+  //fetch toutes les données PROJETS au chargement de la homepage.
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/projets`,
+          {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+          },
+        );
+
+        if (response.ok) {
+          const projData = await response.json();
+          setProjData(projData);
+        }
+      } catch (err) {
+        console.error("Erreur lors de la connexion :", err);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const handleAdminConnect = () => {
+    /*  const isConfirm =  */ window.confirm(
+      "Souhaitez vous vous connecter en tant qu'administrateur du site ?",
+    );
+
+    /* if (isConfirm) {
+      const password = window.prompt("veuillez saisir le mot de passe administrateur");
+
+      if (password === import.meta.env.VITE_API_PASSWORD) { */
+    window.alert("connexion acceptée");
+    localStorage.setItem("isAdmin", "admin");
+    navigate("/admin/formations");
+    /*   }
+    } else {
+      alert("Connexion refusée");
+      localStorage.removeItem("isAdmin");
+  } */
+  };
 
   return (
     <UserContext.Provider
       value={{
         userData,
         setUserData,
+        autreData,
+        setAutreData,
+        handleAdminConnect,
+        certData,
+        setCertData,
+        expData,
+        setExpData,
+        projData,
+        setProjData,
       }}
     >
       {children}
@@ -111,6 +249,11 @@ function ContextProvider({ children }: { children: React.ReactNode }) {
 
 function useContextProvider() {
   const context = useContext(UserContext);
+  if (!context) {
+    throw new Error(
+      "useContextProvider doit être utilisé à l'intérieur de <ContextProvider>",
+    );
+  }
   return context;
 }
 
