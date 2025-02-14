@@ -20,10 +20,10 @@ router.put("/api/user/:id", userActions.update); */
 import autreActions from "./modules/autre/autreActions";
 
 router.get("/api/autres", autreActions.browse);
-/* router.get("/api/autres/:id", autreActions.read);
-router.put("/api/autres/:id", autreActions.update)
-router.delete("/api/autres/:id", autreActions.remove)
-router.post("/api/autres", autreActions.add) */
+router.get("/api/autres/:id", autreActions.read);
+router.put("/api/autres/:id", autreActions.update);
+router.delete("/api/autres/:id", autreActions.remove);
+router.post("/api/autres", autreActions.add);
 
 /* ************************************************************************* */
 // TRAITEMENT DES DONNEES CERTIFICAT
@@ -50,10 +50,10 @@ router.post("/api/exp", expActions.add);
 import projActions from "./modules/projets/projetsActions";
 
 router.get("/api/projets", projActions.browse);
-/* router.get("/api/projets/:id",projActions.read);
-router.put("/api/projets/:id", projActions.update)
-router.delete("/api/projets/:id", projActions.remove)
-router.post("/api/projets", projActions.add) */
+router.get("/api/projets/:id", projActions.read);
+router.put("/api/projets/:id", projActions.update);
+router.delete("/api/projets/:id", projActions.remove);
+router.post("/api/projets", projActions.add);
 
 /* ************************************************************************* */
 // TRAITEMENT DES MESSAGES CONTACT

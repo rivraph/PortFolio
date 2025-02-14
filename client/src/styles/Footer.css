@@ -1,34 +1,49 @@
 .footercontener {
-  position: relative;
-  color: #61dafbaa;
-  text-shadow: 0 0 15px black;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-  font-size: 15px;
-  width: 100vw;
-  height: 10vh;
+  @media screen and (min-width: 979px) {
+    color: var(--color7-);
+    text-shadow: 0 0 15px white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 30px;
+    width: 100vw;
+    height: 10vh;
+  }
   @media screen and (min-width: 768px) and (max-width: 979px) {
     font-size: 20px;
     flex-wrap: wrap;
   }
-  @media screen and (min-width: 979px) {
-    font-size: 25px;
+}
+
+@keyframes footerblinkShadow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre légère au début */
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1); /* Ombre plus forte au milieu */
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Retour à l'ombre légère */
   }
 }
 
-#therrelylife:hover {
-  cursor: pointer;
+.footerblink-text {
+  display: inline-block;
+  transition: box-shadow 0.3s ease-in-out; /* Pour une transition douce */
+}
+
+.footerblink-text:hover {
+  animation: blinkShadow 1s infinite; /* Animation sur le hover */
 }
 
 .reactlogo {
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 2000ms;
 }
 
 .reactlogo:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 1em white);
 }
 
 @keyframes reactlogo-spin {

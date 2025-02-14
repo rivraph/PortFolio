@@ -4,11 +4,7 @@ Projet réalisé avec un monorepo de base de la Wild Code School, suivant l'arch
 
 Vous avez un espace visiteur de base et vous pouvez naviguer sur le site pour me découvrir !
 
-SECRET, en cliquant sur le logo de REACT, on peut se connecter en admin et on peut gérer, modifier, ajouter, supprimer les données du cv par pages :
-- formations
-- experiences
-- projets
-- autres
+
 
 | Commande à savoir              | Description                                                                 |
 |------------------------|-----------------------------------------------------------------------------|
@@ -17,3 +13,16 @@ SECRET, en cliquant sur le logo de REACT, on peut se connecter en admin et on pe
 | `npm run dev`          | Démarre les deux serveurs (client et serveur) dans un seul terminal         |
 | `npm run check`        | Exécute les outils de validation (linting et formatage)                     |
 | `npm run test`         | Exécute les tests unitaires et d'intégration                                |
+
+
+
+
+
+
+
+
+SECRET, en cliquant sur le logo de REACT, on peut se connecter en admin et on peut gérer, modifier, ajouter, supprimer les données du cv par pages :
+- formations
+- experiences
+- projets
+- autres

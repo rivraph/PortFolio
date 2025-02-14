@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useContextProvider } from "../context/userContext";
-import "../styles/Myprojects.css";
+import "../styles/Projets.css";
 import { useNavigate } from "react-router-dom";
 
 function Projets() {
@@ -221,7 +221,7 @@ function Projets() {
   };
 
   return (
-    <div className="formationspagecontener">
+    <div className="projetspagecontener">
       <div className="buttonpage">
         <button type="button" onClick={onChangePage}>
           formations
@@ -237,71 +237,73 @@ function Projets() {
         </button>
       </div>
 
-      <form className="tableauformations">
-        {projData.map((p) => (
-          <div className="col" key={p.id}>
-            <label htmlFor="" id="displayOffLabel">
-              {p.user_id}
-            </label>
-            <input
-              type="text"
-              id="nom"
-              name="nom"
-              readOnly={!edit}
-              value={p.nom}
-              onChange={(e) => handleChange(e, p.id)}
-              required
-            />
-            <input
-              type="text"
-              id="img"
-              name="img"
-              readOnly={!edit}
-              value={p.img}
-              onChange={(e) => handleChange(e, p.id)}
-              required
-            />
-            <input
-              type="text"
-              id="info"
-              name="info"
-              readOnly={!edit}
-              value={p.info}
-              onChange={(e) => handleChange(e, p.id)}
-              required
-            />
-            <input
-              type="text"
-              id="url"
-              name="url"
-              readOnly={!edit}
-              value={p.url}
-              onChange={(e) => handleChange(e, p.id)}
-              required
-            />
+      <form className="tableauprojets">
+        {projData
+          .sort((a, b) => b.id - a.id)
+          .map((p) => (
+            <div className="colproj" key={p.id}>
+              <label htmlFor="" id="displayOffLabel">
+                {p.user_id}
+              </label>
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                readOnly={!edit}
+                value={p.nom}
+                onChange={(e) => handleChange(e, p.id)}
+                required
+              />
+              <input
+                type="text"
+                id="img"
+                name="img"
+                readOnly={!edit}
+                value={p.img}
+                onChange={(e) => handleChange(e, p.id)}
+                required
+              />
+              <input
+                type="text"
+                id="info"
+                name="info"
+                readOnly={!edit}
+                value={p.info}
+                onChange={(e) => handleChange(e, p.id)}
+                required
+              />
+              <input
+                type="text"
+                id="url"
+                name="url"
+                readOnly={!edit}
+                value={p.url}
+                onChange={(e) => handleChange(e, p.id)}
+                required
+              />
 
-            <button
-              type="button"
-              onClick={handleEditClick}
-              onKeyDown={handleKeyPress}
-              aria-label={p.id.toString()}
-            >
-              {edit ? "✅" : "🖌"}
-            </button>
-            <button
-              type="button"
-              onClick={handleRemoveClick}
-              onKeyDown={handleKeyPress}
-              aria-label={p.id.toString()}
-            >
-              {remove ? "🗑" : "🗑"}
-            </button>
-          </div>
-        ))}
+              <button
+                type="button"
+                onClick={handleEditClick}
+                onKeyDown={handleKeyPress}
+                aria-label={p.id.toString()}
+              >
+                {edit ? "✅" : "🖌"}
+              </button>
+              <button
+                type="button"
+                onClick={handleRemoveClick}
+                onKeyDown={handleKeyPress}
+                aria-label={p.id.toString()}
+              >
+                {remove ? "🗑" : "🗑"}
+              </button>
+            </div>
+          ))}
       </form>
 
       {add && (
-        <div className="col">
+        <div className="colAutre">
           <input
             type="text"
             name="nom"

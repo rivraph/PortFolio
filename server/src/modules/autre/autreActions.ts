@@ -15,19 +15,19 @@ const browse: RequestHandler = async (req, res, next) => {
   }
 };
 
-/* // The R of BREAD - Read operation
+// READ
 const read: RequestHandler = async (req, res, next) => {
   try {
-    // Fetch a specific item based on the provided ID
-    const itemId = Number(req.params.id);
-    const item = await itemRepository.read(itemId);
+    // Fetch a specific certid based on the provided ID
+    const id = Number(req.params.id);
+    const autres = await autreRepository.read(id);
 
     // If the item is not found, respond with HTTP 404 (Not Found)
     // Otherwise, respond with the item in JSON format
-    if (item == null) {
+    if (autres == null) {
       res.sendStatus(404);
     } else {
-      res.json(item);
+      res.json(autres);
     }
   } catch (err) {
     // Pass any errors to the error-handling middleware
@@ -35,24 +35,74 @@ const read: RequestHandler = async (req, res, next) => {
   }
 };
 
-// The A of BREAD - Add (Create) operation
-const add: RequestHandler = async (req, res, next) => {
+// UPDATE
+const update: RequestHandler = async (req, res, next) => {
   try {
-    // Extract the item data from the request body
-    const newItem = {
-      title: req.body.title,
+    const id = Number(req.params.id);
+    const updatedAutre = {
+      id: id,
       user_id: req.body.user_id,
+      intitule: req.body.intitule,
+      description: req.body.description,
     };
 
-    // Create the item
-    const insertId = await itemRepository.create(newItem);
+    const newAutre = await autreRepository.edit(id, updatedAutre);
 
-    // Respond with HTTP 201 (Created) and the ID of the newly inserted item
-    res.status(201).json({ insertId });
+    if (newAutre == null) {
+      console.info("Erreur envoi données newCERT vers front", newAutre);
+      res.sendStatus(404);
+    } else {
+      res.json(newAutre);
+    }
   } catch (err) {
-    // Pass any errors to the error-handling middleware
     next(err);
   }
-}; */
+};
 
-export default { browse };
+// REMOVE
+const remove: RequestHandler = async (req, res, next) => {
+  try {
+    const id = Number(req.params.id);
+    const insertId = await autreRepository.delete(id);
+    console.info("Suppression validée");
+    res.status(201).json({ insertId });
+  } catch (err) {
+    next(err);
+  }
+};
+
+// ADD
+const add: RequestHandler = async (req, res, next) => {
+  try {
+    const newAutre = {
+      user_id: req.body.user_id,
+      intitule: req.body.intitule,
+      description: req.body.description,
+    };
+
+    // Vérification des champs
+    if (!newAutre.user_id || !newAutre.intitule || !newAutre.description) {
+      console.error("Erreur : Certains champs ne sont pas remplis");
+      res.sendStatus(400);
+      return;
+    }
+
+    // Vérification si le diplôme existe déjà dans la base de données
+    const bddCheck = await autreRepository.find(newAutre.intitule);
+
+    if (!bddCheck) {
+      const insertAutre = await autreRepository.create(newAutre);
+      console.info("Certificat ajouté à la base de données", insertAutre);
+      res.status(201).json({ insertAutre });
+    } else {
+      console.error(
+        "Erreur : Cet intitulé existe déjà dans la base de données",
+      );
+      res.sendStatus(409);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+export default { browse, read, update, remove, add };

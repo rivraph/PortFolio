@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useContextProvider } from "../context/userContext";
-import "../styles/Myprojects.css";
+import "../styles/Autres.css";
 import { useNavigate } from "react-router-dom";
 
 function Autres() {
@@ -217,7 +217,7 @@ function Autres() {
   };
 
   return (
-    <div className="formationspagecontener">
+    <div className="autrescontener">
       <div className="buttonpage">
         <button type="button" onClick={onChangePage}>
           formations
@@ -233,7 +233,7 @@ function Autres() {
         </button>
       </div>
 
-      <form className="tableauformations">
+      <form className="tableauautres">
         {autreData.map((a) => (
           <div className="col" key={a.id}>
             <label htmlFor="" id="displayOffLabel">

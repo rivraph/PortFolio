@@ -1,0 +1,32 @@
+.autrescontener {
+  height: 59vh;
+  font-family: Arial, Helvetica, sans-serif;
+  form {
+    margin-top: 5%;
+  }
+}
+.tableauautres {
+  #intitule {
+    width: 10vw;
+    font-size: auto;
+    text-align: left;
+
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #description {
+    width: 70vw;
+
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #displayOffLabel {
+    display: none;
+  }
+
+  #buttonAdd {
+    margin: 6vh;
+    width: 10vw;
+    height: 5vh;
+  }
+}

@@ -8,23 +8,40 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --color1-: #11151d;
-  --color2-: #222d41;
-  --color3-: #374158;
+  --color1-: #0d0d0c;
+  --color2-: #262624;
+  --color3-: #d9d6d2;
   --color4-: #7f5056;
   --color5-: #d76c58;
+  --color6-: #32598c;
+  --color7-: #2c7bbf;
+  --color8-: #a0bed9;
+  --color9-: #73634f;
+  --color10-: #bfac95;
+  --color11-: #f2f1f0;
+  --color12-: #8b8c81;
+
   .edu-au-vic-wa-nt-guides {
     font-family: "Edu AU VIC WA NT Guides", cursive;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
   }
-  background-image: url("/background4.png");
+  /* background-image: url("/background4.png");
   background-position-y: top;
   background-attachment: fixed;
   background-position: center;
   background-size: 98vw 85vh;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background: linear-gradient(
+    to bottom,
+    var(--color1-) 0%,
+    /* Transition douce vers le gris moyen */
+    var(--color11-) 18% /* Début de la zone claire */,
+    #bbb 82% /* Fin de la zone claire */,
+    var(--color1-) 96% /* Transition douce vers le gris foncé */,
+    var(--color1-)
+  );
 }
 
 @tailwind base;

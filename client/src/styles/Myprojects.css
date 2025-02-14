@@ -88,3 +88,19 @@ figure.cardProject {
   background-color: var(--color8-);
   color: var(--color7-);
 }
+
+#construction {
+  position: relative;
+  bottom: 60vh;
+  height: 18vh;
+  font-size: 250%;
+  text-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+  background-color: rgba(0, 0, 0, 0.535);
+  margin: 10%;
+  @media screen and (min-width: 768px) {
+    bottom: 80vh;
+    font-size: 800%;
+    z-index: 5000;
+  }
+}

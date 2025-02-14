@@ -17,7 +17,7 @@ function Footer() {
           <img src={reactLogo} alt="React logo" />
         </a>
         <p className="read-the-docs">
-          <b>Powered by REACT</b>
+          <b className="footerblink-test">Powered by REACT</b>
         </p>
         <p>
           <b> © RR development </b>

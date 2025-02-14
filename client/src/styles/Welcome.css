@@ -1,30 +1,71 @@
 .principalwelcome {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  margin: 0;
-  margin: 0 5% 0 5%;
-}
+  overflow-y: scroll;
+  height: 75vh;
+  margin: 0 2% 0 2%;
+  @media screen and (min-width: 768px) {
+    height: 80vh;
+    margin: 0 5% 0 5%;
+    overflow-y: initial;
+    flex-wrap: wrap;
+  }
 
-.buttonWelcome {
-  background-color: var(--color3-);
-  color: white;
-  margin-left: 38vw;
-  width: 15%;
-  height: 8%;
-  border-radius: 1em;
-  box-shadow: 0 2px 2px var(--color7-);
-  cursor: pointer;
-  transition: background-color 300ms, color 300ms;
-  font-size: 180%;
-}
+  .linkWelcome {
+    background-color: var(--color3-);
+    color: var(--color11-);
+    width: 20vw;
+    height: 15vh;
+    border-radius: 1em;
+    box-shadow: 5px 5px 2px var(--color12-);
+    cursor: pointer;
+    position: relative;
+    left: 5vw;
+    bottom: 5vh;
+    transition: background-color 300ms, color 300ms;
+    @media screen and (min-width: 768px) {
+      margin-left: 38vw;
+      width: 12vw;
+      height: 6%;
+      font-size: 180%;
+      left: -20vw;
+      bottom: 0;
+    }
+  }
 
-.buttonWelcome:hover {
-  background-color: var(--color8-);
-  color: var(--color7-);
-}
+  .linkWelcome:hover {
+    background-color: var(--color11-);
+    color: var(--color7-);
+  }
 
-.principalwelcome h3 {
-  font-size: 30px;
-  margin: 1%;
+  h2 {
+    margin: 2% 0 0 0;
+    font-size: 200%;
+  }
+
+  h2:hover {
+    text-shadow: 2px 2px 5px black;
+    @media screen and (min-width: 768px) {
+      text-shadow: 2px 2px 2px var(--color4-);
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+    width: 50vw;
+    position: relative;
+    left: 30vw;
+    top: 6.5vh;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      font-size: 27px;
+      margin: 1vh;
+      height: 5vh;
+      width: 65vw;
+      color: var(--color1-);
+      text-shadow: 2px 4px 1px var(--color8-);
+      left: 33vw;
+      top: 6.5vh;
+    }
+  }
 }

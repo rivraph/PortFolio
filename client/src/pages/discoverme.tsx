@@ -12,7 +12,7 @@ function Discoverme() {
   /* const [typedTitle, setTypedTitle] = useState("");
   const [typedDesc, setTypedDesc] = useState(""); */
   const titre = `${userData?.prenom} ${userData?.nom} Développeur Web FullStack`;
-  const desc = autreData[4]?.description;
+  const desc = autreData[6]?.description;
   localStorage.removeItem("isAdmin");
 
   /* useEffect(() => {
@@ -44,7 +44,7 @@ function Discoverme() {
         <h1 className="titleProfilDm">{titre}</h1>
         <p className="personalityProfilDm">{desc}</p>
       </div>
-      <div>
+      <div className="conteneurdiscoverbutton">
         <Link to="/cv" className="discoverButton">
           Cursus
         </Link>

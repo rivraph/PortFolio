@@ -102,7 +102,7 @@ function Cv() {
           </div>
         )}
       </div>
-      <div>
+      <div className="contenercvbutton">
         <Link to="/myprojects" className="cvButton">
           Projets
         </Link>

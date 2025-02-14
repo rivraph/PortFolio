@@ -1,7 +1,18 @@
 import { useState } from "react";
 import { useContextProvider } from "../context/userContext";
-import "../styles/Myprojects.css";
+import "../styles/Experiences.css";
 import { useNavigate } from "react-router-dom";
+
+type updateExpProps = {
+  id: number;
+  user_id: number;
+  entreprise: string;
+  lieu: string;
+  date_debut: string;
+  date_fin: string;
+  poste: string;
+  description: string;
+};
 
 function Experiences() {
   const { expData, setExpData } = useContextProvider();
@@ -18,6 +29,13 @@ function Experiences() {
   });
   console.info(setRemove);
   const navigate = useNavigate();
+
+  // conversion de la date pour trnasmission à la bdd
+  const formatDateForBackend = (dateString: string) => {
+    if (!dateString) return "";
+    const [day, month, year] = dateString.split("-");
+    return `${year}-${month}-${day}`;
+  };
 
   // fonction pour naviguer entre les 3 pages admin
   const onChangePage = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -48,20 +66,29 @@ function Experiences() {
     event: React.MouseEvent<HTMLButtonElement>,
   ) => {
     const id = Number(event.currentTarget.ariaLabel);
-    console.info(id);
-    const updateExp = expData.find((c) => c.id === id);
+    const updateExp: updateExpProps | undefined = expData.find(
+      (c) => c.id === id,
+    );
+
     if (!updateExp) {
       console.error("erreur : certificat introuvable");
+      return;
     }
 
     if (edit) {
       try {
+        const formattedExp = {
+          ...updateExp,
+          date_debut: formatDateForBackend(updateExp.date_debut),
+          date_fin: formatDateForBackend(updateExp.date_fin),
+        };
+
         const response = await fetch(
           `${import.meta.env.VITE_API_URL}/api/exp/${id}`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(updateExp),
+            body: JSON.stringify(formattedExp),
           },
         );
 
@@ -169,8 +196,8 @@ function Experiences() {
           user_id: 1,
           entreprise: newRow.entreprise,
           lieu: newRow.lieu,
-          date_debut: newRow.date_debut,
-          date_fin: newRow.date_fin,
+          date_debut: formatDateForBackend(newRow.date_debut),
+          date_fin: formatDateForBackend(newRow.date_fin),
           poste: newRow.poste,
           description: newRow.description,
         }),
@@ -226,7 +253,7 @@ function Experiences() {
   };
 
   return (
-    <div className="formationspagecontener">
+    <div className="experiencespagecontener">
       <div className="buttonpage">
         <button type="button" onClick={onChangePage}>
           formations
@@ -242,84 +269,86 @@ function Experiences() {
         </button>
       </div>
 
-      <form className="tableauformations">
-        {expData.map((exp) => (
-          <div className="col" key={exp.id}>
-            <label htmlFor="" id="displayOffLabel">
-              {exp.user_id}
-            </label>
-            <input
-              type="text"
-              id="entreprise"
-              name="entreprise"
-              readOnly={!edit}
-              value={exp.entreprise}
-              onChange={(e) => handleChange(e, exp.id)}
-              required
-            />
-            <input
-              type="text"
-              id="lieu"
-              name="lieu"
-              readOnly={!edit}
-              value={exp.lieu}
-              onChange={(e) => handleChange(e, exp.id)}
-              required
-            />
-            <input
-              type="text"
-              id="date debut"
-              name="date debut"
-              readOnly={!edit}
-              value={exp.date_debut}
-              onChange={(e) => handleChange(e, exp.id)}
-              required
-            />
-            <input
-              type="text"
-              id="date fin"
-              name="date fin"
-              readOnly={!edit}
-              value={exp.date_fin}
-              onChange={(e) => handleChange(e, exp.id)}
-              required
-            />
-            <input
-              type="text"
-              id="poste"
-              name="poste"
-              readOnly={!edit}
-              value={exp.poste}
-              onChange={(e) => handleChange(e, exp.id)}
-              required
-            />
-            <input
-              type="text"
-              id="description"
-              name="description"
-              readOnly={!edit}
-              value={exp.description}
-              onChange={(e) => handleChange(e, exp.id)}
-              required
-            />
-            <button
-              type="button"
-              onClick={handleEditClick}
-              onKeyDown={handleKeyPress}
-              aria-label={exp.id.toString()}
-            >
-              {edit ? "✅" : "🖌"}
-            </button>
-            <button
-              type="button"
-              onClick={handleRemoveClick}
-              onKeyDown={handleKeyPress}
-              aria-label={exp.id.toString()}
-            >
-              {remove ? "🗑" : "🗑"}
-            </button>
-          </div>
-        ))}
+      <form className="tableauexperiences">
+        {expData
+          .sort((a, b) => b.id - a.id)
+          .map((exp) => (
+            <div className="col" key={exp.id}>
+              <label htmlFor="" id="displayOffLabel">
+                {exp.user_id}
+              </label>
+              <input
+                type="text"
+                id="entreprise"
+                name="entreprise"
+                readOnly={!edit}
+                value={exp.entreprise}
+                onChange={(e) => handleChange(e, exp.id)}
+                required
+              />
+              <input
+                type="text"
+                id="lieu"
+                name="lieu"
+                readOnly={!edit}
+                value={exp.lieu}
+                onChange={(e) => handleChange(e, exp.id)}
+                required
+              />
+              <input
+                type="text"
+                id="date-debut"
+                name="date debut"
+                readOnly={!edit}
+                value={formatDateForBackend(exp.date_debut)}
+                onChange={(e) => handleChange(e, exp.id)}
+                required
+              />
+              <input
+                type="text"
+                id="date-fin"
+                name="date fin"
+                readOnly={!edit}
+                value={formatDateForBackend(exp.date_debut)}
+                onChange={(e) => handleChange(e, exp.id)}
+                required
+              />
+              <input
+                type="text"
+                id="poste"
+                name="poste"
+                readOnly={!edit}
+                value={exp.poste}
+                onChange={(e) => handleChange(e, exp.id)}
+                required
+              />
+              <input
+                type="text"
+                id="descriptionExp"
+                name="description"
+                readOnly={!edit}
+                value={exp.description}
+                onChange={(e) => handleChange(e, exp.id)}
+                required
+              />
+              <button
+                type="button"
+                onClick={handleEditClick}
+                onKeyDown={handleKeyPress}
+                aria-label={exp.id.toString()}
+              >
+                {edit ? "✅" : "🖌"}
+              </button>
+              <button
+                type="button"
+                onClick={handleRemoveClick}
+                onKeyDown={handleKeyPress}
+                aria-label={exp.id.toString()}
+              >
+                {remove ? "🗑" : "🗑"}
+              </button>
+            </div>
+          ))}
       </form>
 
       {add && (

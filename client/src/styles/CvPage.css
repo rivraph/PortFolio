@@ -4,88 +4,119 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 2em;
-}
 
-.infosCv {
-  display: grid;
-  grid-template-columns: 20vw 70vw auto;
-  grid-template-rows: 10vh auto;
-  border-radius: 50px;
-  width: 100%;
-  height: 6vh;
-  /*  box-shadow: 2px 2px 1px white;
+  .infosCv {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    margin: 0;
+    /*  box-shadow: 2px 2px 1px white;
   text-shadow: 5px 5px 5px 10px black;
   text-rendering: optimizeSpeed;
   background-color: #3741589c; */
-  @media screen and (min-width: 768px) and (max-width: 979px) {
-    padding: 5%;
-    font-size: 20px;
-    width: 60%;
+    @media screen and (min-width: 768px) and (max-width: 979px) {
+      padding: 5%;
+      width: 60%;
+    }
+    @media screen and (min-width: 979px) {
+      width: 25%;
+      padding: 2%;
+      display: grid;
+      grid-template-columns: 20vw 70vw auto;
+      grid-template-rows: 10vh auto;
+      border-radius: 50px;
+      width: 100%;
+      height: 6vh;
+    }
   }
-  @media screen and (min-width: 979px) {
-    width: 25%;
-    padding: 2%;
+
+  .titleCardCv {
+    width: 100%;
+    @media screen and (min-width: 768px) and (max-width: 979px) {
+      font-size: 30px;
+      padding: 0;
+    }
+    @media screen and (min-width: 979px) {
+      grid-row-start: span 2;
+      width: 100%;
+      height: 20vh;
+      text-align: right;
+      font-size: 2.6em;
+      padding: 0;
+    }
   }
-}
 
-.titleCardCv {
-  grid-row-start: span 2;
-  width: 100%;
-  height: 20vh;
-  text-align: right;
-  @media screen and (min-width: 768px) and (max-width: 979px) {
-    font-size: 30px;
-    padding: 0;
+  .infosCv h2 {
+    margin: 5% 0 0 0;
+    @media screen and (min-width: 768px) {
+      margin-top: 7vh;
+      margin-left: 7vw;
+      text-align: right;
+    }
   }
-  @media screen and (min-width: 979px) {
-    font-size: 2.6em;
+
+  .cv-contener {
+    transform: translate(-50%, -50%);
+    background-color: var(--color2-);
+    padding: 3%;
+    border-radius: 20px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    font-size: 120%;
+    width: 80%;
+    position: absolute;
+    top: 113vh;
+    left: 50vw;
+    z-index: 99999;
+    span {
+      font-family: Arial, "Times New Roman", Times, serif;
+      border-left: solid 5px black;
+      width: 80vw;
+    }
+    @media screen and (min-width: 768px) {
+      grid-column: 2 / span 2;
+      font-size: 120%;
+      width: 100vw;
+      gap: 1rem;
+      top: 53%;
+      left: 60%;
+      height: 53%;
+      max-width: 600px;
+      span {
+        font-family: Arial, "Times New Roman", Times, serif;
+        border-left: solid 5px black;
+        padding-left: 1vw;
+      }
+    }
   }
-}
 
-.infosCv h2 {
-  margin-top: 7vh;
-  margin-left: 7vw;
-  text-align: right;
-}
-
-.cv-contener {
-  grid-column: 2 / span 2;
-  font-size: 120%;
-  width: 100%;
-  gap: 1rem;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  height: 70%;
-  transform: translate(-50%, -50%);
-  background-color: var(--color2-);
-  padding: 1%;
-  border-radius: 20px;
-  max-width: 600px;
-  span {
-    font-family: Arial, "Times New Roman", Times, serif;
-    border-left: solid 5px black;
-    padding-left: 1vw;
+  .contenercvbutton {
+    @media screen and (max-width: 768px) {
+      margin-top: -6vh;
+    }
   }
-}
+  .cvButton {
+    background-color: var(--color3-);
+    color: white;
+    border-radius: 2em;
+    box-shadow: 0 5px 5px var(--color7-);
+    cursor: pointer;
+    position: relative;
+    top: 5vh;
+    font-size: 35px;
+    padding: 3%;
+    @media screen and (min-width: 768px) {
+      position: relative;
+      top: 14vh;
+      right: 23.5vw;
+      padding: 1%;
+      transition: background-color 300ms, color 300ms;
+      font-size: 180%;
+    }
+  }
 
-.cvButton {
-  background-color: var(--color3-);
-  color: white;
-  border-radius: 2em;
-  box-shadow: 0 5px 5px var(--color7-);
-  cursor: pointer;
-  position: relative;
-  top: 14vh;
-  right: 23.5vw;
-  padding: 1%;
-  transition: background-color 300ms, color 300ms;
-  font-size: 180%;
-}
-
-.cvButton:hover {
-  background-color: var(--color8-);
-  color: var(--color7-);
+  .cvButton:hover {
+    background-color: var(--color8-);
+    color: var(--color7-);
+  }
 }

@@ -77,6 +77,7 @@ type projectsProps = {
   info: string;
   url: string;
 };
+
 function ContextProvider({ children }: ContextProviderProps): JSX.Element {
   //fonctions et variables à insérer
   const [userData, setUserData] = useState<UserData | null>(null);
@@ -208,22 +209,25 @@ function ContextProvider({ children }: ContextProviderProps): JSX.Element {
   }, []);
 
   const handleAdminConnect = () => {
-    /*  const isConfirm =  */ window.confirm(
+    const isConfirm = window.confirm(
       "Souhaitez vous vous connecter en tant qu'administrateur du site ?",
     );
 
-    /* if (isConfirm) {
-      const password = window.prompt("veuillez saisir le mot de passe administrateur");
-
-      if (password === import.meta.env.VITE_API_PASSWORD) { */
-    window.alert("connexion acceptée");
-    localStorage.setItem("isAdmin", "admin");
-    navigate("/admin/formations");
-    /*   }
-    } else {
-      alert("Connexion refusée");
-      localStorage.removeItem("isAdmin");
-  } */
+    if (isConfirm) {
+      const inputPass = window.prompt(
+        "veuillez saisir le mot de passe administrateur",
+      );
+      const mdp = import.meta.env.VITE_PASSWORD;
+      if (inputPass === mdp) {
+        window.alert("connexion acceptée");
+        localStorage.setItem("isAdmin", "admin");
+        navigate("formations");
+      } else {
+        alert("Connexion refusée");
+        localStorage.removeItem("isAdmin");
+        navigate("/");
+      }
+    }
   };
 
   return (

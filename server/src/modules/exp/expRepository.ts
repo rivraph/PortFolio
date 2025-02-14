@@ -27,7 +27,7 @@ class expRepository {
 
   async read(id: number) {
     const [rows] = await databaseClient.query<Rows>(
-      "select id, user_id, entreprise, lieu, DATE_FORMAT(date_debut, '%d-%m-%Y') ) AS date_debut, DATE_FORMAT(date_fin, '%q-%m-%Y') AS date_fin, poste from experiences where id = ?",
+      "select id, user_id, entreprise, lieu, DATE_FORMAT(date_debut, '%d-%m-%Y') AS date_debut, DATE_FORMAT(date_fin, '%q-%m-%Y') AS date_fin, poste from experiences where id = ?",
       [id],
     );
 

@@ -95,6 +95,7 @@ function Projects() {
       <Link to="/contact" className="projetButton">
         Contact
       </Link>
+      <div id="construction"> PAGE EN CONSTRUCTION </div>
     </>
   );
 }
