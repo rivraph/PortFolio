@@ -1,44 +1,11 @@
 import { useState } from "react";
-import datas from "../datas/datas.json";
 import "../styles/Myprojects.css";
 import { Link } from "react-router-dom";
-
-const data = datas.projets;
+import { useContextProvider } from "../context/userContext";
 
 function Projects() {
   localStorage.removeItem("isAdmin");
-  const projects = [
-    {
-      projet: data.projet1,
-      img: data.img1,
-      description: data.description1,
-      url: data.url1,
-    },
-    {
-      projet: data.projet2,
-      img: data.img2,
-      description: data.description2,
-      url: data.url2,
-    },
-    {
-      projet: data.projet3,
-      img: data.img3,
-      description: data.description3,
-      url: data.url3,
-    },
-    {
-      projet: data.projet4,
-      img: data.img4,
-      description: data.description4,
-      url: data.url4,
-    },
-    {
-      projet: data.projet5,
-      img: data.img5,
-      description: data.description5,
-      url: data.url5,
-    },
-  ];
+  const { projData } = useContextProvider();
 
   const [visibleProjects, setVisibleProjects] = useState<number | null>(null);
 
@@ -60,32 +27,30 @@ function Projects() {
   return (
     <>
       <div className="projectprincipal">
-        {projects.map((project, index) => (
-          <figure className="cardProject" key={1}>
+        {projData.map((p, index) => (
+          <figure className="cardProject" key={p.id}>
             <h2
               className="titleCardProject"
               onClick={() => toggleVisibility(index)}
               style={{ cursor: "pointer" }}
               onKeyDown={onKeyDown}
             >
-              {project.projet}
+              {p.nom}
             </h2>
             {visibleProjects === index && (
               <>
                 <img
                   className="cardImage"
-                  src={project.img}
+                  src={p.img}
                   alt="représentation du projet"
                 />
-                <figcaption className="cardDescription">
-                  {project.description}
-                </figcaption>
+                <figcaption className="cardDescription">{p.info}</figcaption>
                 <button
                   className="cardButton"
                   type="button"
-                  onClick={() => handleClick(project.url)}
+                  onClick={() => handleClick(p.url)}
                 >
-                  Github link
+                  Site
                 </button>
               </>
             )}
@@ -95,7 +60,6 @@ function Projects() {
       <Link to="/contact" className="projetButton">
         Contact
       </Link>
-      <div id="construction"> PAGE EN CONSTRUCTION </div>
     </>
   );
 }
