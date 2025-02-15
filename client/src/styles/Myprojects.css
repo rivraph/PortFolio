@@ -1,72 +1,100 @@
 .projectprincipal {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 2em;
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-figure.cardProject {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  width: 80vw;
-  margin-bottom: 10%;
-  border-radius: 5em;
-  box-shadow: 1px 1px 15px white;
+  width: 100vw;
+  justify-content: center;
+  scrollbar-width: thin;
+  overflow-y: scroll;
+  height: 80vh;
   @media screen and (min-width: 768px) and (max-width: 979px) {
-    width: 45%;
+    width: 100%;
   }
   @media screen and (min-width: 979px) {
-    width: 30vw;
-    padding: 2%;
+    scrollbar-width: initial;
+    width: 100vw;
+    padding: 0.5%;
     margin: 1%;
+    gap: 0;
   }
-}
+  .cardProject {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin-bottom: 10%;
+    border-radius: 5em;
+    box-shadow: 1px 2px 15px var(--color3-);
 
-.cardImage {
-  box-shadow: 10px 10px 40px 5px white;
-  border-radius: 20px;
-  padding: 3px;
-  width: 70vw;
-  @media screen and (min-width: 979px) {
-    width: 90%;
+    @media screen and (min-width: 768px) {
+      width: 14vw;
+      margin-bottom: 10%;
+      border-radius: 2em;
+      box-shadow: 1px 2px 15px var(--color3-);
+    }
+  }
+  h2 {
+    font-size: 25px;
+    margin: 1% 0 0 1%;
+    @media screen and (min-width: 979px) {
+      font-size: 35px;
+      margin: 3% 0 0 0;
+    }
+  }
+
+  .cardImage {
+    box-shadow: 10px 10px 40px 5px white;
+    border-radius: 20px;
+    padding: 1px;
+    max-height: auto;
+    max-width: 80%;
+    @media screen and (min-width: 979px) {
+      padding: 0.5%;
+      margin: 4% 0 6% 0;
+      box-shadow: 0 0 5px 2px var(--color3-);
+    }
+  }
+
+  .cardDescription {
+    width: 80%;
+    margin: 5%;
+    padding: 0.5%;
+    background-color: var(--color3-);
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 0 0 5px 2px var(--color3-);
+    text-align: center;
+    @media screen and (min-width: 768px) and (max-width: 979px) {
+      font-size: 30px;
+    }
+    @media screen and (min-width: 979px) {
+      width: 90%;
+      font-size: 1.3em;
+      margin: 0 5% 0 5%;
+      padding: 0 2% 0 2%;
+    }
+  }
+
+  .cardButton {
+    background-color: #213547;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 1.5em;
     padding: 2%;
-  }
-}
-
-.cardDescription {
-  width: 80%;
-  margin: 5%;
-  padding: 5px;
-  background-color: #61dafbaa;
-  border-radius: 10px;
-  border-style: groove solid;
-  text-align: center;
-  @media screen and (min-width: 768px) and (max-width: 979px) {
-    font-size: 30px;
-  }
-  @media screen and (min-width: 979px) {
-    width: 90%;
-    font-size: 1.5em;
-  }
-}
-
-.cardButton {
-  background-color: #213547;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  @media screen and (min-width: 768px) and (max-width: 979px) {
-    font-size: 30px;
-  }
-  @media screen and (min-width: 979px) {
-    width: 38%;
-    font-size: 1.5em;
+    @media screen and (min-width: 768px) and (max-width: 979px) {
+      font-size: 30px;
+    }
+    @media screen and (min-width: 979px) {
+      width: 38%;
+      margin: 5% 0 5% 0;
+      font-size: 1.5em;
+      padding: 0;
+      box-shadow: 0 0 5px 2px var(--color3-);
+    }
   }
 }
 
@@ -74,33 +102,20 @@ figure.cardProject {
   background-color: var(--color3-);
   color: white;
   padding: 0.6%;
-  position: relative;
-  left: 42vw;
-  bottom: 77vh;
+  position: fixed;
   border-radius: 1em;
   box-shadow: 0 5px 5px var(--color7-);
   cursor: pointer;
   transition: background-color 300ms, color 300ms;
   font-size: 180%;
+  left: 70vw;
+  top: 90vh;
+  @media screen and (min-width: 768px) {
+    left: 90vw;
+    top: 80vh;
+  }
 }
-
 .projetButton:hover {
   background-color: var(--color8-);
   color: var(--color7-);
-}
-
-#construction {
-  position: relative;
-  bottom: 60vh;
-  height: 18vh;
-  font-size: 250%;
-  text-shadow: 0 0 5px black;
-  box-shadow: 0 0 5px black;
-  background-color: rgba(0, 0, 0, 0.535);
-  margin: 10%;
-  @media screen and (min-width: 768px) {
-    bottom: 80vh;
-    font-size: 800%;
-    z-index: 5000;
-  }
 }

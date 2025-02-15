@@ -105,8 +105,8 @@ VALUES
   
 INSERT INTO projets (id, user_id, nom, img, info, url)
 VALUES
-  (1, 1, "Solo Rush", "/solo_rush_preview.png", "Projet challenge 1 journée réalisé en solo en HTML et CSS après 7 jours d'apprentissage au sein de la WCS (Wild Code School). Projet réalisé en 5H", "https://github.com/rivraph/SoloRush1-WCS"),
-  (2, 1, "Html & CSS", "/Bienvenue-a-Bord.png", "Premier projet réalisé en 5 jours après 15 jours de formation", "https://github.com/rivraph/Html-Css-Bienvenue-bord"),
-  (3, 1, "Les Petits Frappés", "/Les-petits-frappes.png", "Premier projet de groupe mettant en œuvre l'apprentissage du JS", "https://github.com/rivraph/JS-RemoteFR-Vendangeurs-P1-Les-Frappes"),
-  (4, 1, "DevRap", "/DevRAP.png", "Second projet de groupe développé en AGILE, REACT, Express, les API ... ", "https://github.com/rivraph/P2-DevRAP"),
-  (5, 1, "Arcadia", NULL, "En cours de développement : 3e projet fullstack Backend et Frontend, BDD MySQL, CRUD, BREAD ...", "Bientôt disponible");
+  (2, 1, "Solo Rush", "/solo_rush_preview.png", "Projet challenge uniquement en HTML et CSS. Projet réalisé en 5H", "https://rivraph.github.io/SoloRush1-WCS/"),
+  (1, 1, "Html & CSS", "/Bienvenue-a-Bord.png", "Premier projet HTML et CSS après 15 jours de formation", "https://rivraph.github.io/Html-Css-Bienvenue-bord/"),
+  (3, 1, "Les Petits Frappés", "/Les-petits-frappes.png", "1er projet à base JavaScript", "https://rivraph.github.io/JS-RemoteFR-Vendangeurs-P1-Les-Frappes/"),
+  (4, 1, "DevRap", "/DevRAP.png", "2nd projet développé en AGILE sur REACT, Express avec fetch d'API ... ", "https://p2-dev-rap-client.vercel.app/"),
+  (5, 1, "Arcadia", "/arcadia-preview.png", "( En cours ) 3e projet fullstack avec BDD, MySQL, CRUD, BREAD ...", "Bientôt disponible");

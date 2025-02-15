@@ -1,6 +1,6 @@
+import { useContextProvider } from "../context/userContext";
 import "../styles/ContactMe.css";
 import { useState } from "react";
-import datas from "../datas/datas.json";
 
 function Contact() {
   const [nom, setNom] = useState("");
@@ -9,7 +9,8 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [telephone, setTelephone] = useState("");
   const [message, setMessage] = useState("");
-  const dat = datas.personality;
+  const { userData } = useContextProvider();
+
   localStorage.removeItem("isAdmin");
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -136,15 +137,15 @@ function Contact() {
 
       <div className="contactfooter">
         <span className="spancontact">
-          <a href={dat.github} target="_blank" rel="noreferrer">
+          <a href={userData?.github} target="_blank" rel="noreferrer">
             Github
           </a>{" "}
           |
-          <a href={dat.linkedin} target="_blank" rel="noreferrer">
+          <a href={userData?.linkedin} target="_blank" rel="noreferrer">
             linkedin
           </a>{" "}
           |
-          <a href={dat.facebook} target="_blank" rel="noreferrer">
+          <a href={userData?.facebook} target="_blank" rel="noreferrer">
             facebook
           </a>{" "}
           |
