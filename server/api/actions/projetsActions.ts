@@ -1,14 +1,14 @@
 import type { RequestHandler } from "express";
-import autreRepository from "./autreRepository";
+import projetsRepository from "../repository/projetsRepository";
 
 // The B of BREAD - Browse (Read All) operation
 const browse: RequestHandler = async (req, res, next) => {
   try {
     // Fetch all items
-    const autre = await autreRepository.readAll();
+    const projets = await projetsRepository.readAll();
 
     // Respond with the items in JSON format
-    res.json(autre);
+    res.json(projets);
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
@@ -19,15 +19,15 @@ const browse: RequestHandler = async (req, res, next) => {
 const read: RequestHandler = async (req, res, next) => {
   try {
     // Fetch a specific certid based on the provided ID
-    const id = Number(req.params.id);
-    const autres = await autreRepository.read(id);
+    const certId = Number(req.params.id);
+    const certif = await projetsRepository.read(certId);
 
     // If the item is not found, respond with HTTP 404 (Not Found)
     // Otherwise, respond with the item in JSON format
-    if (autres == null) {
+    if (certif == null) {
       res.sendStatus(404);
     } else {
-      res.json(autres);
+      res.json(certif);
     }
   } catch (err) {
     // Pass any errors to the error-handling middleware
@@ -38,21 +38,23 @@ const read: RequestHandler = async (req, res, next) => {
 // UPDATE
 const update: RequestHandler = async (req, res, next) => {
   try {
-    const id = Number(req.params.id);
-    const updatedAutre = {
-      id: id,
+    const projId = Number(req.params.id);
+    const updatedProj = {
+      id: projId,
       user_id: req.body.user_id,
-      intitule: req.body.intitule,
-      description: req.body.description,
+      nom: req.body.nom,
+      img: req.body.img,
+      info: req.body.info,
+      url: req.body.url,
     };
 
-    const newAutre = await autreRepository.edit(id, updatedAutre);
+    const newProj = await projetsRepository.edit(projId, updatedProj);
 
-    if (newAutre == null) {
-      console.info("Erreur envoi données newCERT vers front", newAutre);
+    if (newProj == null) {
+      console.info("Erreur envoi données newCERT vers front", newProj);
       res.sendStatus(404);
     } else {
-      res.json(newAutre);
+      res.json(newProj);
     }
   } catch (err) {
     next(err);
@@ -63,7 +65,7 @@ const update: RequestHandler = async (req, res, next) => {
 const remove: RequestHandler = async (req, res, next) => {
   try {
     const id = Number(req.params.id);
-    const insertId = await autreRepository.delete(id);
+    const insertId = await projetsRepository.delete(id);
     console.info("Suppression validée");
     res.status(201).json({ insertId });
   } catch (err) {
@@ -74,30 +76,36 @@ const remove: RequestHandler = async (req, res, next) => {
 // ADD
 const add: RequestHandler = async (req, res, next) => {
   try {
-    const newAutre = {
+    const newProj = {
       user_id: req.body.user_id,
-      intitule: req.body.intitule,
-      description: req.body.description,
+      nom: req.body.nom,
+      img: req.body.img,
+      info: req.body.info,
+      url: req.body.url,
     };
 
     // Vérification des champs
-    if (!newAutre.user_id || !newAutre.intitule || !newAutre.description) {
+    if (
+      !newProj.user_id ||
+      !newProj.nom ||
+      !newProj.img ||
+      !newProj.info ||
+      !newProj.url
+    ) {
       console.error("Erreur : Certains champs ne sont pas remplis");
       res.sendStatus(400);
       return;
     }
 
     // Vérification si le diplôme existe déjà dans la base de données
-    const bddCheck = await autreRepository.find(newAutre.intitule);
+    const bddCheck = await projetsRepository.find(newProj.nom);
 
     if (!bddCheck) {
-      const insertAutre = await autreRepository.create(newAutre);
-      console.info("Certificat ajouté à la base de données", insertAutre);
-      res.status(201).json({ insertAutre });
+      const insertProj = await projetsRepository.create(newProj);
+      console.info("Certificat ajouté à la base de données", insertProj);
+      res.status(201).json({ insertProj });
     } else {
-      console.error(
-        "Erreur : Cet intitulé existe déjà dans la base de données",
-      );
+      console.error("Erreur : Ce diplôme existe déjà dans la base de données");
       res.sendStatus(409);
     }
   } catch (err) {

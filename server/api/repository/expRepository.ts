@@ -1,7 +1,7 @@
 import type { ResultSetHeader, RowDataPacket } from "mysql2";
-import databaseClient from "../../../database/client";
+import databaseClient from "../../database/client";
 
-import type { Result, Rows } from "../../../database/client";
+import type { Result, Rows } from "../../database/client";
 
 type expProps = {
   id: number;

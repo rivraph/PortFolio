@@ -7,7 +7,7 @@ const app = express();
 /* ************************************************************************* */
 
 // TRAITEMENT DES DONNEES USER
-import userActions from "./modules/user/userActions";
+import userActions from "./actions/userActions";
 
 router.get("/api/user", userActions.browse);
 router.get("/api/user/:id", userActions.read);
@@ -17,7 +17,7 @@ router.put("/api/user/:id", userActions.update); */
 
 /* ************************************************************************* */
 // TRAITEMENT DES DONNEES AUTRES
-import autreActions from "./modules/autre/autreActions";
+import autreActions from "./actions/autreActions";
 
 router.get("/api/autres", autreActions.browse);
 router.get("/api/autres/:id", autreActions.read);
@@ -27,7 +27,7 @@ router.post("/api/autres", autreActions.add);
 
 /* ************************************************************************* */
 // TRAITEMENT DES DONNEES CERTIFICAT
-import certActions from "./modules/cert/certActions";
+import certActions from "./actions/certActions";
 
 router.get("/api/cert", certActions.browse);
 router.get("/api/cert/:id", certActions.read);
@@ -37,7 +37,7 @@ router.post("/api/cert", certActions.add);
 
 /* ************************************************************************* */
 // TRAITEMENT DES DONNEES EXPERIENCES
-import expActions from "./modules/exp/expActions";
+import expActions from "./actions/expActions";
 
 router.get("/api/exp", expActions.browse);
 router.get("/api/exp/:id", expActions.read);
@@ -47,7 +47,7 @@ router.post("/api/exp", expActions.add);
 
 /* ************************************************************************* */
 // TRAITEMENT DES DONNEES PROJETS
-import projActions from "./modules/projets/projetsActions";
+import projActions from "./actions/projetsActions";
 
 router.get("/api/projets", projActions.browse);
 router.get("/api/projets/:id", projActions.read);
@@ -57,7 +57,7 @@ router.post("/api/projets", projActions.add);
 
 /* ************************************************************************* */
 // TRAITEMENT DES MESSAGES CONTACT
-import { sendEmail } from "./modules/MailController/mailController";
+import { sendEmail } from "./actions/mailController";
 
 router.post("/send-email", sendEmail);
 /* ************************************************************************* */

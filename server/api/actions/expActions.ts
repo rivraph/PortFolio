@@ -1,33 +1,33 @@
 import type { RequestHandler } from "express";
-import certRepository from "./certRepository";
+import expRepository from "../repository/expRepository";
 
-// BROWSE
+// The B of BREAD - Browse (Read All) operation
 const browse: RequestHandler = async (req, res, next) => {
   try {
-    // Fetch all certificats
-    const certificat = await certRepository.readAll();
+    // Fetch all items
+    const exps = await expRepository.readAll();
 
     // Respond with the items in JSON format
-    res.json(certificat);
+    res.json(exps);
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
   }
 };
 
-// READ
+// The R of BREAD - Read operation
 const read: RequestHandler = async (req, res, next) => {
   try {
-    // Fetch a specific certid based on the provided ID
-    const certId = Number(req.params.id);
-    const certif = await certRepository.read(certId);
+    // Fetch a specific item based on the provided ID
+    const expsId = Number(req.params.id);
+    const exps = await expRepository.read(expsId);
 
     // If the item is not found, respond with HTTP 404 (Not Found)
     // Otherwise, respond with the item in JSON format
-    if (certif == null) {
+    if (exps == null) {
       res.sendStatus(404);
     } else {
-      res.json(certif);
+      res.json(exps);
     }
   } catch (err) {
     // Pass any errors to the error-handling middleware
@@ -38,23 +38,25 @@ const read: RequestHandler = async (req, res, next) => {
 // UPDATE
 const update: RequestHandler = async (req, res, next) => {
   try {
-    const certId = Number(req.params.id);
+    const id = Number(req.params.id);
     const updatedCert = {
-      id: certId,
+      id: id,
       user_id: req.body.user_id,
-      diplome: req.body.diplome,
-      annee_obtention: req.body.annee_obtention,
+      entreprise: req.body.entreprise,
+      lieu: req.body.lieu,
+      date_debut: req.body.date_debut,
+      date_fin: req.body.date_fin,
+      poste: req.body.poste,
       description: req.body.description,
-      localisation: req.body.localisation,
     };
 
-    const newCert = await certRepository.edit(certId, updatedCert);
+    const newExp = await expRepository.edit(id, updatedCert);
 
-    if (newCert == null) {
-      console.info("Erreur envoi données newCERT vers front", newCert);
+    if (newExp == null) {
+      console.info("Erreur envoi données newCERT vers front", newExp);
       res.sendStatus(404);
     } else {
-      res.json(newCert);
+      res.json(newExp);
     }
   } catch (err) {
     next(err);
@@ -65,7 +67,7 @@ const update: RequestHandler = async (req, res, next) => {
 const remove: RequestHandler = async (req, res, next) => {
   try {
     const id = Number(req.params.id);
-    const insertId = await certRepository.delete(id);
+    const insertId = await expRepository.delete(id);
     console.info("Suppression validée");
     res.status(201).json({ insertId });
   } catch (err) {
@@ -76,21 +78,25 @@ const remove: RequestHandler = async (req, res, next) => {
 // ADD
 const add: RequestHandler = async (req, res, next) => {
   try {
-    const newCert = {
+    const newExp = {
       user_id: req.body.user_id,
-      diplome: req.body.diplome,
-      annee_obtention: req.body.annee_obtention,
+      entreprise: req.body.entreprise,
+      lieu: req.body.lieu,
+      date_debut: req.body.date_debut,
+      date_fin: req.body.date_fin,
+      poste: req.body.poste,
       description: req.body.description,
-      localisation: req.body.localisation,
     };
 
     // Vérification des champs
     if (
-      !newCert.user_id ||
-      !newCert.diplome ||
-      !newCert.annee_obtention ||
-      !newCert.description ||
-      !newCert.localisation
+      !newExp.user_id ||
+      !newExp.entreprise ||
+      !newExp.lieu ||
+      !newExp.date_debut ||
+      !newExp.date_fin ||
+      !newExp.poste ||
+      !newExp.description
     ) {
       console.error("Erreur : Certains champs ne sont pas remplis");
       res.sendStatus(400);
@@ -98,12 +104,12 @@ const add: RequestHandler = async (req, res, next) => {
     }
 
     // Vérification si le diplôme existe déjà dans la base de données
-    const bddCheck = await certRepository.find(newCert.diplome);
+    const bddCheck = await expRepository.find(newExp.date_debut);
 
     if (!bddCheck) {
-      const insertCert = await certRepository.create(newCert);
-      console.info("Certificat ajouté à la base de données", insertCert);
-      res.status(201).json({ insertCert });
+      const insertExp = await expRepository.create(newExp);
+      console.info("Certificat ajouté à la base de données", insertExp);
+      res.status(201).json({ insertExp });
     } else {
       console.error("Erreur : Ce diplôme existe déjà dans la base de données");
       res.sendStatus(409);

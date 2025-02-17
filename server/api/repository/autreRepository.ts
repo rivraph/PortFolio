@@ -1,18 +1,16 @@
 import type { ResultSetHeader, RowDataPacket } from "mysql2";
-import databaseClient from "../../../database/client";
+import databaseClient from "../../database/client";
 
-import type { Result, Rows } from "../../../database/client";
+import type { Result, Rows } from "../../database/client";
 
-type projectsProps = {
+type autreProps = {
   id: number;
   user_id: number;
-  nom: string;
-  img: string;
-  info: string;
-  url: string;
+  intitule: string;
+  description: string;
 };
 
-class projetsRepository {
+class autreRepository {
   // The C of CRUD - Create operation
 
   /* async create(item: Omit<UserProps, "id">) {
@@ -31,39 +29,32 @@ class projetsRepository {
   async read(id: number) {
     // Execute the SQL SELECT query to retrieve a specific item by its ID
     const [rows] = await databaseClient.query<Rows>(
-      "select * from projets where id = ?",
+      "select * from autres where id = ?",
       [id],
     );
 
     // Return the first row of the result, which represents the item
-    return rows[0] as projectsProps;
+    return rows[0] as autreProps;
   }
 
   async readAll() {
     // Execute the SQL SELECT query to retrieve all items from the "item" table
-    const [rows] = await databaseClient.query<Rows>("select * from projets ");
+    const [rows] = await databaseClient.query<Rows>("select * from autres ");
 
     // Return the array of items
-    return rows as projectsProps[];
+    return rows as autreProps[];
   }
-  async edit(id: number, updateProj: Partial<projectsProps>) {
+
+  async edit(id: number, updateAutre: Partial<autreProps>) {
     try {
       const query = `
-        UPDATE projets SET
-          nom = ?,
-          img = ?,
-          info = ?,
-          url = ?
+        UPDATE autres SET
+          intitule = ?,
+          description = ?
         WHERE id = ?
       `;
 
-      const values = [
-        updateProj.nom,
-        updateProj.img,
-        updateProj.info,
-        updateProj.url,
-        id,
-      ];
+      const values = [updateAutre.intitule, updateAutre.description, id];
 
       const [result] = await databaseClient.query<ResultSetHeader>(
         query,
@@ -71,7 +62,7 @@ class projetsRepository {
       );
 
       if (result.affectedRows === 0) {
-        console.error(`Certificat avec ID ${id} non trouvé pour mise à jour`);
+        console.error(`Information ${id} non trouvé`);
         return undefined;
       }
 
@@ -85,16 +76,16 @@ class projetsRepository {
   async delete(id: number) {
     try {
       const [result] = await databaseClient.query<ResultSetHeader>(
-        "DELETE FROM projets WHERE id = ?",
+        "DELETE FROM autres WHERE id = ?",
         [id],
       );
 
       if (result.affectedRows === 0) {
-        console.error(`Certificat avec ID ${id} non trouvé pour suppression`);
+        console.error(`Intitulé avec ID ${id} non trouvé pour suppression`);
         return undefined;
       }
 
-      console.info("Suppression validée pour certificat ID", id);
+      console.info("Suppression validée pour l'intitulé", id);
       return { id }; // Retourne l'ID du certificat supprimé
     } catch (error) {
       console.error(
@@ -105,17 +96,17 @@ class projetsRepository {
     }
   }
 
-  async find(nom: string) {
+  async find(intitule: string) {
     try {
       const [rows] = await databaseClient.query<RowDataPacket[]>(
         "SELECT * FROM projets WHERE nom = ?",
-        [nom],
+        [intitule],
       );
 
       // Si un nom de projet est trouvé, retourner les résultats, sinon, retourner undefined
       if (rows.length > 0) {
-        console.info(`ce porjet ${nom} existe déjà existant`);
-        return rows[0] as projectsProps;
+        console.info(`${intitule} existe déjà `);
+        return rows[0] as autreProps;
       }
 
       return undefined;
@@ -126,15 +117,15 @@ class projetsRepository {
   }
 
   // The C of CRUD - Create operation
-  async create(u: Omit<projectsProps, "id">): Promise<projectsProps> {
+  async create(u: Omit<autreProps, "id">): Promise<autreProps> {
     try {
       const [result] = await databaseClient.query<ResultSetHeader>(
-        "INSERT INTO projets ( user_id, nom, img, info, url ) VALUES (?, ?, ?, ?, ?)",
-        [u.user_id, u.nom, u.img, u.info, u.url],
+        "INSERT INTO autres ( user_id, intitule, description ) VALUES (?, ?, ?)",
+        [u.user_id, u.intitule, u.description],
       );
 
       console.info("Données ajoutées dans la base de données projets", result);
-      return { ...u, id: result.insertId } as projectsProps;
+      return { ...u, id: result.insertId } as autreProps;
     } catch (error) {
       console.error("Erreur lors de la création du projet :", error);
       throw error;
@@ -142,4 +133,4 @@ class projetsRepository {
   }
 }
 
-export default new projetsRepository();
+export default new autreRepository();
