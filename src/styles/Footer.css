@@ -1,0 +1,63 @@
+.footercontener {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 13% 10% 0 10%;
+  height: 10vh;
+  @media screen and (min-width: 979px) {
+    color: var(--color7-);
+    text-shadow: 0 0 15px white;
+    flex-wrap: wrap;
+    font-size: 30px;
+    margin: 5% 10% 0 10%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    font-size: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@keyframes footerblinkShadow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre légère au début */
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1); /* Ombre plus forte au milieu */
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Retour à l'ombre légère */
+  }
+}
+
+.footerblink-text {
+  display: inline-block;
+  transition: box-shadow 0.3s ease-in-out; /* Pour une transition douce */
+}
+
+.footerblink-text:hover {
+  animation: blinkShadow 1s infinite; /* Animation sur le hover */
+}
+
+.reactlogo {
+  will-change: filter;
+  transition: filter 2000ms;
+}
+
+.reactlogo:hover {
+  filter: drop-shadow(0 0 1em white);
+}
+
+@keyframes reactlogo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reactlogo {
+    animation: reactlogo-spin infinite 20s linear;
+  }
+}

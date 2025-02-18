@@ -1,73 +1,249 @@
 {
-	"personality": {
-		"title": "Developpeur Web Full Stack",
-		"firstName": "Raphaël",
-		"lastName": "Rivière",
-		"age": "37",
-		"adresse": "13 rue des estivenques",
-		"permis": "A et B",
-		"city": "Gallargues le Montueux, France",
-		"telephone": "06 63 77 86 77",
-		"email": "raphael.riviere@gmail.com",
-		"github": "https://github.com/rivraph",
-		"linkedin": "https://www.linkedin.com/in/rivière-raphaël-130b78151/",
-		"facebook": "https://www.facebook.com/raphael.riviere.58",
-		"hobbies": "photographie, sports, simracing, moto, informatique ...",
-		"instagram": "https://www.instagram.com/therrelylifephotography/",
-		"personality": "Sérieux, bosseur, pragmatique, dévoué et prêt à tout pour réussir en tant que développeur Web Fullstack !",
-		"img": "/assets/IMG_3880.webp"
-	},
+  "user": [
+    {
+      "id": 1,
+      "prenom": "Raphaël",
+      "nom": "Rivière",
+      "adresse": "13 rue des estivenques",
+      "permis": "A et B",
+      "ville": "Gallargues le Montueux",
+      "telephone": "0663778677",
+      "email": "raphaelriviere87@gmail.com",
+      "password": "raphael974",
+      "date_de_naissance": "14-10-1987",
+      "nationalite": "française",
+      "github": "https://github.com/rivraph",
+      "linkedin": "https://www.linkedin.com/in/rivière-raphaël-130b78151/",
+      "facebook": "https://www.facebook.com/raphael.riviere.58",
+      "instagram": "https://www.instagram.com/therrelylifephotography/",
+      "hobbies": "photographie, videos, sports, simracing, moto, informatique, découvrir le monde, la nature ...",
+      "img": "../IMG_3880.webp"
+    }
+  ],
 
-	"education": {
-		"wild": "09/2024 - 02/2025 => formation à la wild Code School de développeur Web et Web Application Bac +2 RNCP n° 37674 (HTML, CSS, JS, REACT, Vite.JS, API web, Express.JS, Node.JS, router, SQL, Agile / SCRUM, déploiement continu CI/CD, Github, docker (EN COURS)",
-		"remap": "2015 => reprogrammation avancée moteur essence et diesel à Alientech France à Montans",
-		"tdra": "2010 => technicien de diagnostic et réparateur automobile à l'AFPA de Chartres",
-		"bacc": "2005 => baccalauréat scientifique option sciences de l'ingénieur au lycée de la Rivière (île de Réunion)"
-	},
-
-	"experience": {
-		"bleulib": "Août 2024 => stage observation chez Bleu Libellule. Découverte du métier de webmaster et de développeur web",
-
-		"biomotors": "07/2021 - 05/2024 => technicien conseil et gestionnaire d'expertises",
-
-		"kia1": "01/2018 - 06/2021 => Chef d'atelier, responsable magasin et pièces détachées, réception clientèle et entretien et réparations véhicules Kia",
-
-		"kia2": "10/2012 - 05/2016 => Technicien avancé et en charge de l'entretien et la réparation des véhicules Kia",
-
-		"mecaperfs": "07/2016 - 12/2017 => Gérant entreprise individuelle en mécanique automobile, reprogrammation et solutions electroniques, pose d'accessoires et reventre de voitures d'occasion.",
-
-		"delko": "03/2012 - 09/2012 => Mécanicien multimarque",
-
-		"kia": "07/2010 - 01/2012 => Mécanicien multimarque chez un concessionnaire spécialisé KIA, Mitsubishi et Subaru"
-	},
-
-	"others": {
-		"francais": "Francais => lu, écrit er parlé couramment",
-		"anglais": "Anglais => lu, écrit et parlé niveau scolaire",
-		"espagnol": "Espagnol => notion",
-		"logiciels": "Divers software => Suite Office, Adobe Photoshop, Visual Studio Code, Trello, Slack, Figma, WireFrame.cc, terminal et bien d'autres"
-	},
-
-	"projets": {
-		"projet1": "solo Rush",
-		"img1": "/assets/solo rush preview.png",
-		"description1": "Projet challenge 1 journée réalisé en solo en html et CSS après 7 jours d'apprentissage au sein de la WCS (Wild Code School. Projet réalisé en 5H",
-		"url1": "https://github.com/rivraph/SoloRush1-WCS",
-		"projet2": "html & CSS",
-		"img2": "/assets/Bienvenue à Bord.png",
-		"description2": "Premier projet réalisé en 5 jours après 15 jours de formation",
-		"url2": "https://github.com/rivraph/Html-Css-Bienvenue-bord",
-		"projet3": "P1 - Les petits frappés",
-		"img3": "/assets/Les-petits-frappés.png",
-		"description3": "Premier projet de groupe mettant en oeuvre l'apprentissage du JS.",
-		"url3": "https://github.com/rivraph/JS-RemoteFR-Vendangeurs-P1-Les-Frappes",
-		"projet4": "P2 - DevRAP",
-		"img4": "/assets/DevRAP.png",
-		"description4": "Second projet de groupe mettant en fonction le fonctionne AGILE, REACT, Express, les API ... ",
-		"url4": "https://github.com/rivraph/P2-DevRAP",
-		"projet5": "P3 - Arcadia",
-		"img5": "En cours de création",
-		"description5": "3e projet mélangeant Back et Front. Site de jeux d'arcade.",
-		"url5": "Lien non dispo"
-	}
+  "certificat": [
+    {
+      "id": 1,
+      "diplome": "BAC S",
+      "annee_obtention": 2005,
+      "description": "Baccalauréat Scientifique option Sciences de l'Ingénieur au lycée de la Rivière",
+      "localisation": "Réunion"
+    },
+    {
+      "id": 2,
+      "diplome": "GUCD",
+      "annee_obtention": 2008,
+      "description": "Gestionnaire d'Unité Commerciale et de Distribution niveau Bac+2 à la Chambre des Commerces Sud",
+      "localisation": "Réunion"
+    },
+    {
+      "id": 3,
+      "diplome": "TDRA",
+      "annee_obtention": 2010,
+      "description": "Technicien de Diagnostic et Réparateur Automobile niveau Bac à l'AFPA",
+      "localisation": "Chartres"
+    },
+    {
+      "id": 4,
+      "diplome": "Remappeur",
+      "annee_obtention": 2015,
+      "description": "Reprogrammateur moteur essence et diesel",
+      "localisation": "Alby"
+    },
+    {
+      "id": 5,
+      "diplome": "DWWA",
+      "annee_obtention": 2025,
+      "description": "Developpeur Web et Web Application avec la Wild Code School",
+      "localisation": "Remote"
+    }
+  ],
+  "experiences": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "entreprise": "SOGELEC INFORMATIQUE",
+      "lieu": "Saint Pierre (97410)",
+      "date_debut": "01-09-2006",
+      "date_fin": "30-06-2007",
+      "poste": "Conseiller en informatique",
+      "description": "Vente, gestion des stocks, facturation, réparation, montage ..."
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "entreprise": "HyperCrack",
+      "lieu": "Saint Pierre (97410)",
+      "date_debut": "01-07-2007",
+      "date_fin": "30-06-2008",
+      "poste": "Conseiller rayon multimédia",
+      "description": "gestion du rayon, merchandising, conseiller clientèle ..."
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "entreprise": "Feu Vert",
+      "lieu": "Tours (37000)",
+      "date_debut": "14-12-2009",
+      "date_fin": "24-12-2009",
+      "poste": "Mécanicien multimarques",
+      "description": "Mécanicien, monteur de pneus, accessoiriste ..."
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "entreprise": "Sud Loire Automobiles",
+      "lieu": "Saint Cyr sur Loire (37540",
+      "date_debut": "08-03-2010",
+      "date_fin": "26-03-2010",
+      "poste": "Mécanicien multimarque",
+      "description": "Mécanique générale sur Kia, Mitsubishi, Subaru et multimarque (Par VO), accessoiristes ..."
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "entreprise": "Sud Loire Automobiles",
+      "lieu": "Saint Cyr sur Loire (37540",
+      "date_debut": "28-06-2010",
+      "date_fin": "27-01-2012",
+      "poste": "Mécanicien multimarque",
+      "description": "Mécanique générale sur Kia, Mitsubishi, Subaru et multimarque (gestion parc VO), accessoiristes, mécanique générale, préparateur VO ..."
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "entreprise": "Delko",
+      "lieu": "Vestric et Candiac (30600)",
+      "date_debut": "05-03-2012",
+      "date_fin": "28-09-2012",
+      "poste": "Mécanicien multimarque",
+      "description": "mécanique générale, monteur de pneus, accessoiriste ..."
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "entreprise": "Kia Sodak",
+      "lieu": "Castelnau-le-Lez (34170)",
+      "date_debut": "01-10-2012",
+      "date_fin": "126-03-2016",
+      "poste": "Mécanicien Kia",
+      "description": "Mécanique générale sur Kia et multimarque (gestion parc VO), techncien de diagnostic, accessoiristes ..."
+    },
+    {
+      "id": 8,
+      "user_id": 1,
+      "entreprise": "Mecaperfs",
+      "lieu": "Baillargues (34660)",
+      "date_debut": "01-08-2016",
+      "date_fin": "14-12-2017",
+      "poste": "Gérant EURL",
+      "description": "Gérant d'entreprise, gestion financière et administrative, mécanicien multimarque auto et moto, diagnosticien, préparateur motoriste, pose accessoires, carrossier, réparation et vente de véhicules d'occasion ..."
+    },
+    {
+      "id": 9,
+      "user_id": 1,
+      "entreprise": "Kia Sodak",
+      "lieu": "Montpellier (34000)",
+      "date_debut": "02-01-2018",
+      "date_fin": "30-06-2021",
+      "poste": "Chef d'atelier",
+      "description": "Chef d'atelier, réceptionnaire, magasinier, gestion des garanties, mécanicien et technicien, préparateur VO ..."
+    },
+    {
+      "id": 10,
+      "user_id": 1,
+      "entreprise": "Biomotors",
+      "lieu": "Vendargues (34740)",
+      "date_debut": "2021-07-01",
+      "date_fin": "2024-05-10",
+      "poste": "Conseiller technique",
+      "description": "Conseiller technique, gestionnaire des expertises terrain et administratif, pose et gestion des kits, mécanique légère, dépannage sur site, test injecteurs essence ..."
+    }
+  ],
+  "autres": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "intitule": "Français",
+      "description": "Langue courante"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "intitule": "Anglais",
+      "description": "Niveau élementaire"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "intitule": "Automobile",
+      "description": "Divers valises de diagnostic multimarques, reprogrammation moteur, logiciels constructeur ..."
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "intitule": "Informatique",
+      "description": "Suite Office, Photoshop, Lightroom, DaVinci Resolve, Trello, Slack ..."
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "intitule": "Dev Web",
+      "description": "VsCode, GitHub, Figma, Wireframe.cc, Terminal ..."
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "intitule": "qualités",
+      "description": "Sérieux, pragmatique, en recheche d'apprentissage et d'évolution, je suis disponible en tant que développeur Web Fullstack !"
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "intitule": "Stacks",
+      "description": "HTML, CSS, JavaScript, REACT, GIT, GITHUB, TypeScript, NodeJS, Api Rest, Agile, Merise, ExpressJS, MySQL, NoSQL, BDD, routing, authentification ..."
+    }
+  ],
+  "projets": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "nom": "Html & CSS",
+      "img": "/Bienvenue-a-Bord.png",
+      "info": "Premier projet HTML et CSS après 15 jours de formation",
+      "url": "https://rivraph.github.io/Html-Css-Bienvenue-bord/"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "nom": "Solo Rush",
+      "img": "/solo rush preview.png",
+      "info": "Projet challenge uniquement en HTML et CSS. Projet réalisé en 5H",
+      "url": "https://rivraph.github.io/SoloRush1-WCS/"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "nom": "Les Petits Frappés",
+      "img": "/Les-petits-frappes.png",
+      "info": "1er projet à base JavaScript",
+      "url": "https://rivraph.github.io/JS-RemoteFR-Vendangeurs-P1-Les-Frappes/"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "nom": "DevRap",
+      "img": "/DevRAP.png",
+      "info": "(En cours) 2nd projet développé en AGILE sur REACT, Express avec fetch d'API ... ",
+      "url": "https://p2-dev-rap-client.vercel.app/"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "nom": "Arcadia",
+      "img": "/arcadia-preview.png",
+      "info": "(En cours ) 3e projet fullstack avec BDD, MySQL, CRUD, BREAD ...",
+      "url": "Bientôt disponible"
+    }
+  ] 
 }

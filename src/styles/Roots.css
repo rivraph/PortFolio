@@ -1,0 +1,73 @@
+* {
+  text-align: center;
+  --color1-: #11151d;
+  --color2-: #222d41;
+  --color3-: #374158;
+  --color4-: #7f5056;
+  --color5-: #d76c58;
+  --color6-: hsla(214, 35%, 68%, 0.548);
+  --color7-: #61dafbaa;
+  --color8-: lightgrey;
+  font-family: "Miniver", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 3.5em;
+  line-height: 1.1;
+  color: whitesmoke;
+  text-shadow: 1px 5px 8px black;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 30px;
+  text-shadow: 0 0 25px black;
+  color: var(--color7-);
+  z-index: 5;
+  @media screen and (min-width: 768px) and (max-width: 979px) {
+    font-size: 40px;
+  }
+  @media screen and (min-width: 979px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 979px) {
+    font-size: 50px;
+    width: 100%;
+  }
+}
+
+h3:hover,
+h2:hover {
+  text-shadow: 5px 5px 25px var(--color4-);
+}
+
+a,
+h1,
+h2 {
+  font-family: edu-au-vic-wa-nt-guides, Arial, Helvetica, sans-serif;
+  text-decoration: inherit;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* css pour l'affichage d'une div EN CONSTRUCTION */
+#construction {
+  position: absolute;
+  bottom: 40vh;
+  height: 18vh;
+  font-size: 250%;
+  text-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+  background-color: rgba(0, 0, 0, 0.763);
+  margin: 10%;
+  @media screen and (min-width: 768px) {
+    font-size: 800%;
+    bottom: 20vh;
+    left: 6.5vw;
+    z-index: 5000;
+  }
+}

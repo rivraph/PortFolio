@@ -1,0 +1,133 @@
+.discovermeconteneur {
+  height: 70vh;
+  overflow-y: scroll;
+  @media screen and (min-width: 768px) {
+    overflow-y: initial;
+    position: relative;
+    top: 6vh;
+  }
+
+  .profilDm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border-radius: 70px;
+    width: 100vw;
+    @media screen and (min-width: 979px) {
+      width: 100vw;
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      margin: 2%;
+    }
+  }
+
+  .logoDm {
+    border-radius: 5%;
+    width: 62vw;
+    height: auto;
+    margin: 10%;
+    will-change: filter;
+    transition: filter 1000ms;
+    @media screen and (min-width: 768px) and (max-width: 979px) {
+      width: 35%;
+    }
+    @media screen and (min-width: 979px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      margin-left: 50%;
+      width: 40%;
+    }
+  }
+
+  .logoDm:hover {
+    filter: drop-shadow(0 0 1em var(--color3-));
+  }
+
+  .titleProfilDm {
+    font-size: 25px;
+    text-shadow: 2px 2px 5px var(--color1-);
+    width: 75vw;
+    @media screen and (min-width: 768px) and (max-width: 979px) {
+      font-size: 35px;
+    }
+    @media screen and (min-width: 979px) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      width: 40%;
+      margin-left: 21.5%;
+      font-size: 2.5em;
+    }
+  }
+
+  .personalityProfilDm {
+    font-size: 24px;
+    font-family: edu-au-vic-wa-nt-guides, Arial, Helvetica, sans-serif;
+    background-color: var(--color6-);
+    border-radius: 25px;
+    border-style: groove solid;
+    text-align: left;
+    padding: 10px 10px 10px 25px;
+    width: 70vw;
+    margin-top: 6%;
+    @media screen and (min-width: 768px) and (max-width: 979px) {
+      font-size: 20px;
+      width: 55vw;
+    }
+    @media screen and (min-width: 979px) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      width: 40%;
+      margin-left: 20%;
+      margin-top: 3%;
+      will-change: filter;
+      transition: filter 1000ms;
+    }
+  }
+
+  .personalityProfilDm:hover {
+    filter: drop-shadow(0 0 1em var(--color3-));
+    border-style: initial;
+  }
+
+  .conteneurdiscoverbutton {
+    margin: 2vh 0 0 0;
+    @media screen and (min-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  .discoverButton {
+    background-color: var(--color3-);
+    color: white;
+    border-radius: 2em;
+    box-shadow: 0 5px 5px var(--color7-);
+    cursor: pointer;
+    padding: 3%;
+    transition: background-color 300ms, color 300ms;
+    font-size: 140%;
+    @media screen and (min-width: 768px) {
+      color: white;
+      border-radius: 2em;
+      position: relative;
+      padding: 1%;
+      transition: background-color 300ms, color 300ms;
+      font-size: 180%;
+    }
+  }
+
+  .discoverButton:hover {
+    background-color: var(--color8-);
+    color: var(--color7-);
+  }
+}
