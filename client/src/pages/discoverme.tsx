@@ -11,9 +11,10 @@ function Discoverme() {
   const { userData, autreData } = useContextProvider();
   /* const [typedTitle, setTypedTitle] = useState("");
   const [typedDesc, setTypedDesc] = useState(""); */
-  const titre = `${userData?.prenom} ${userData?.nom} Développeur Web FullStack`;
+  const titre = `${userData[0].prenom} ${userData[0].nom} Développeur Web FullStack`;
   const desc = autreData[6]?.description;
   localStorage.removeItem("isAdmin");
+  console.info(userData);
 
   /* useEffect(() => {
      // Fonction pour l'effet de machine à écrire
@@ -40,7 +41,7 @@ function Discoverme() {
   return (
     <div className="discovermeconteneur">
       <div className="profilDm">
-        <img src={userData?.img} width="10%" className="logoDm" alt="moi" />
+        <img src={userData[0].img} width="10%" className="logoDm" alt="moi" />
         <h1 className="titleProfilDm">{titre}</h1>
         <p className="personalityProfilDm">{desc}</p>
       </div>

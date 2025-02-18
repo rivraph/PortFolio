@@ -15,16 +15,16 @@ function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const formData = {
+    /*  const formData = {
       nom,
       prenom,
       demandeur,
       email,
       telephone,
       message,
-    };
+    }; */
 
-    try {
+    /* try {
       const response = await fetch("http://localhost:3310/send-email", {
         method: "POST",
         headers: {
@@ -51,8 +51,8 @@ function Contact() {
       console.error("Erreur:", error);
       alert("Une erreur est survenue. Veuilllez réessayez ultérieurement");
     }
+  }; */
   };
-
   return (
     <div className="contactcontener">
       <form className="formulaire" onSubmit={handleSubmit}>
@@ -137,20 +137,21 @@ function Contact() {
 
       <div className="contactfooter">
         <span className="spancontact">
-          <a href={userData?.github} target="_blank" rel="noreferrer">
+          <a href={userData[0].github} target="_blank" rel="noreferrer">
             Github
           </a>{" "}
           |
-          <a href={userData?.linkedin} target="_blank" rel="noreferrer">
+          <a href={userData[0].linkedin} target="_blank" rel="noreferrer">
             linkedin
           </a>{" "}
           |
-          <a href={userData?.facebook} target="_blank" rel="noreferrer">
+          <a href={userData[0].facebook} target="_blank" rel="noreferrer">
             facebook
           </a>{" "}
           |
         </span>
       </div>
+      <div id="construction">EN CONSTRUCTION</div>
     </div>
   );
 }

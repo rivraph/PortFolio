@@ -243,7 +243,7 @@ function Formations() {
           .map((c) => (
             <div className="col" key={c.id}>
               <label htmlFor="" id="displayOffLabel">
-                {c.user_id}
+                1
               </label>
               <input
                 type="text"

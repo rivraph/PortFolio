@@ -237,7 +237,7 @@ function Autres() {
         {autreData.map((a) => (
           <div className="col" key={a.id}>
             <label htmlFor="" id="displayOffLabel">
-              {a.user_id}
+              1
             </label>
             <input
               type="text"

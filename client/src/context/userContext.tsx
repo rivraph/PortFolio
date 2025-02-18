@@ -1,12 +1,13 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import type { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
+import Data from "../data/datas.json";
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
 type UserContextType = {
-  userData: UserData | null;
-  setUserData: Dispatch<SetStateAction<UserData | null>>;
+  userData: UserData[];
+  setUserData: Dispatch<SetStateAction<UserData[]>>;
   autreData: AutreData[];
   setAutreData: Dispatch<SetStateAction<AutreData[]>>;
   handleAdminConnect: () => void;
@@ -20,7 +21,7 @@ type UserContextType = {
 
 type AutreData = {
   id: number;
-  user_id: number;
+  /*  user_id: number; */
   intitule: string;
   description: string;
 };
@@ -51,9 +52,9 @@ type ContextProviderProps = {
 
 type CertData = {
   id: number;
-  user_id: number;
+  /* user_id: number; */
   diplome: string;
-  annee_obtention: string;
+  annee_obtention: number;
   description: string;
   localisation: string;
 };
@@ -71,7 +72,7 @@ type expProps = {
 
 type projectsProps = {
   id: number;
-  user_id: number;
+  /*  user_id: number; */
   nom: string;
   img: string;
   info: string;
@@ -80,15 +81,16 @@ type projectsProps = {
 
 function ContextProvider({ children }: ContextProviderProps): JSX.Element {
   //fonctions et variables à insérer
-  const [userData, setUserData] = useState<UserData | null>(null);
-  const [autreData, setAutreData] = useState<AutreData[]>([]);
-  const [certData, setCertData] = useState<CertData[]>([]);
-  const [expData, setExpData] = useState<expProps[]>([]);
-  const [projData, setProjData] = useState<projectsProps[]>([]);
+  const [userData, setUserData] = useState<UserData[]>(Data.user);
+  const [certData, setCertData] = useState<CertData[]>(Data.certificat);
+  const [expData, setExpData] = useState<expProps[]>(Data.experiences);
+  const [projData, setProjData] = useState<projectsProps[]>(Data.projets);
+  const [autreData, setAutreData] = useState<AutreData[]>(Data.autres);
+
   const navigate = useNavigate();
 
   //fetch toutes les données USER au chargement de la homepage.
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -108,10 +110,10 @@ function ContextProvider({ children }: ContextProviderProps): JSX.Element {
       }
     };
     fetchData();
-  }, []);
+  }, []); */
 
   //fetch toutes les données AUTRE au chargement de la homepage.
-  useEffect(() => {
+  /*  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -133,34 +135,10 @@ function ContextProvider({ children }: ContextProviderProps): JSX.Element {
     };
     fetchData();
   }, []);
-
-  //fetch toutes les données CERTIFICAT au chargement de la homepage.
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/cert`,
-          {
-            method: "GET",
-            headers: { "Content-Type": "application/json" },
-          },
-        );
-
-        if (response.ok) {
-          const certData = await response.json();
-          console.info("données fetchées certData =>", certData);
-          setCertData(certData);
-          console.info("données fetchées certData =>", certData);
-        }
-      } catch (err) {
-        console.error("Erreur lors de la connexion :", err);
-      }
-    };
-    fetchData();
-  }, []);
+ */
 
   //fetch toutes les données EXPERIENCES au chargement de la homepage.
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -183,10 +161,10 @@ function ContextProvider({ children }: ContextProviderProps): JSX.Element {
       }
     };
     fetchData();
-  }, []);
+  }, []); */
 
   //fetch toutes les données PROJETS au chargement de la homepage.
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -206,7 +184,7 @@ function ContextProvider({ children }: ContextProviderProps): JSX.Element {
       }
     };
     fetchData();
-  }, []);
+  }, []); */
 
   const handleAdminConnect = () => {
     const isConfirm = window.confirm(

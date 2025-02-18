@@ -243,7 +243,7 @@ function Projets() {
           .map((p) => (
             <div className="colproj" key={p.id}>
               <label htmlFor="" id="displayOffLabel">
-                {p.user_id}
+                1
               </label>
               <input
                 type="text"

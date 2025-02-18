@@ -275,7 +275,7 @@ function Experiences() {
           .map((exp) => (
             <div className="col" key={exp.id}>
               <label htmlFor="" id="displayOffLabel">
-                {exp.user_id}
+                1
               </label>
               <input
                 type="text"
